@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
+    <title>Web Crafters</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/FixIt.png" alt="FixIt Logo" id="fixlogo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li class="home"><a href="index.html">Home</a></li>
+                <li>
+                    <select name="Customer" id="customerDropdown">
+                        <option>Customer</option>
+                        <option value="createCustomer">Create customer</option>
+                        <option value="viewCustomer">View customer</option>
+                        <option value="updateCustomer">Update customer</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="Equipment" id="equipmentDropdown">
+                        <option>Equipment</option>
+                        <option value="createEquipment">Create equipment</option>
+                        <option value="viewCustomer">View equipment</option>
+                        <option value="updateCustomer">Update equipment</option>
+                    </select>
+                </li>
+                
+                <li><a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="user.html"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="second-section">
+            
+                <div class="grid-item">
+                   <img src="images/FixIt.png" alt="FixIt Logo" class="image">
+                   <div class="info">
+                    <h1>We Revive <br>Technology, <br> One Fix at <br>a Time.</h1>
+                    <p>Do you have issues with your device?</p>
+                    <div class="button-container">
+                        <a href="user.html"><button class="sign-in-button">Sign In</button></a>
+                    </div>
+                </div>
+                   </div>
+                    
+            
+        </section>
+
+        <section class="third-section">
+            <div>
+                <i class="fa-solid fa-user-plus icon-large"></i> 
+                <h2>CUSTOMER</h2>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-screwdriver-wrench  second-icon-large"></i>
+                <h2>EQUIPMENT</h2>
+            </div>
+        </section>
+
+        <section class="fourth-section">
+            <div >
+               <h1 id="text"> Are we improving in the sales and services we render to our clients?</h1>
+               <p id="text"> Check your percentage  <i class="fa-solid fa-arrow-right"></i></p>
+               
+            </div>
+
+            <div>
+                <img src="images/Project stats.jpg" alt="chart">
+            </div>
+            
+        </section>
+
+        <section class="fifth-section">
+            <div class="Lost">
+              <h1>
+                Looking for our other store locations?
+              </h1>
+              
+              <form class="form" action="#">
+                <div class="form-group">
+                    
+                  <input id="search" name="search" placeholder="180 Vine Street St Cathrines"  required>
+                </div>
+                <button class="submit">SEARCH</button>
+              </form>
+            </div>
+        
+        
+             <div class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3219.314778980069!2d-115.27034278523823!3d36.207543208535505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8eaa6928b22c7%3A0x3d2c04ac4bba39b5!2s2620%20Regatta%20Dr%2C%20Las%20Vegas%2C%20NV%2089128%2C%20USA!5e0!3m2!1sen!2sng!4v1668728757969!5m2!1sen!2sng" width="660" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+             </div>
+        </section>
+
+          <section class="sixth-section">
+            <div class="contact-us">
+                <h2>Contact Us: <br> (702) 331-5565</h2>
+                
+               </div>
+              
+               <div class="icons">
+                 
+               <i class="fab fa-instagram fa-2xl" id="iconI"></i>
+               <i class="fa-brands fa-x-twitter fa-2xl" id="iconT"></i>
+               <i class="fa-brands fa-facebook-f fa-2xl" id="iconF"></i>
+               </div>
+         </section>
+
+         <footer>
+            <h3> <i class="fa-regular fa-copyright"></i> Webcrafters 2023</h3>
+          </footer>
+    </main>
+    <script src="JS/fixit.js"></script>
+</body>
+</html>

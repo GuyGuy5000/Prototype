@@ -1,0 +1,321 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  background: #FFF;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.logo-container {
+  flex: 1;
+}
+
+header img {
+  width: 150px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+nav i {
+  font-size: 20px;
+}
+
+.home {
+  margin-top: 2px;
+}
+
+.grid-item {
+
+  display: grid;
+  margin-left: 150px;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  width: 100%;
+}
+
+.third-section {
+  border-top: 3px solid #E7CD78;
+  border-bottom: 20px solid #000;
+  display: flex;
+  justify-content: space-around;
+ 
+} 
+
+.third-section div {
+  margin-left: 15px;
+  padding: 50px;
+}
+
+.third-section div i {
+  margin-bottom: 35px;
+  margin-left: 45px;
+
+}
+.fourth-section{
+  border-bottom: 20px solid #000;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  width: 100%;
+}
+
+.fifth-section{
+  border-bottom: 3px solid #E7CD78;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  
+}
+.sixth-section{
+  background-color: #333;
+  border-bottom: 1px solid black;
+  color: #FFF;
+  height: 170px;
+  text-align: center; 
+}
+.icons {
+position: absolute;
+left: 1730px;
+margin-top: 30px;
+
+}
+
+footer {
+  text-align: center;
+  font-size: 15px;
+}
+.contact-us h2{
+  margin-bottom: 40px;
+  padding-top: 15px;
+}
+
+#iconI,  #iconT, #iconF {
+  margin-right: 15px;
+}
+.Lost  h1{
+  margin-left: 150px;
+  width: 600px;
+  
+}
+
+.map {
+	width: 100%;
+}
+
+.form {
+	width: 50%;
+	margin: 0 auto;
+  }
+  
+  .form-group {
+	position: relative;
+	margin-bottom: 20px;
+  margin-top: 20px;
+  right: 70px;
+  }
+  
+  .form-group input {
+	width: 100%;
+	height: 40px;
+	border: none;
+	border-bottom: 1px solid #CCC;
+	font-size: 16px;
+	padding: 5px 0;
+	background: transparent;
+	outline: none;
+	transition: all 0.3s ease;
+ 
+  }
+  
+  .form-group input:focus {
+	border-color: #A31521;
+	outline: none;
+
+  }
+  
+  .form-group .label-name {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	color: #999;
+	font-size: 16px;
+	pointer-events: none;
+	transition: all 0.3s ease;
+  }
+  
+  .form-group input:focus + .label-name,
+  .form-group input:valid + .label-name {
+	transform: translateY(-20px);
+	font-size: 14px;
+	color: #333;
+  }
+  
+  .submit {
+  background-color: #333;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+	display: inline-block;
+  margin-right: 160px;
+	padding: 9px 20px;
+	
+  }
+  
+  .submit:hover {
+	background: #555;
+ }
+
+.icon-large, .second-icon-large {
+  font-size: 3.5em; 
+}
+
+#text {
+  margin-left: 130px;
+  
+  width: 600px;
+}
+
+
+h1 {
+  font-size: 46px;
+  margin-right: 320px;
+  margin-top: 40px;
+}
+
+p {
+  font-size: 30px;
+  margin-top: 60px; 
+  margin-right: 230px;
+}
+
+.sign-in-button {
+  background-color: #333; 
+  color: #fff;
+  padding: 10px 20px; 
+  font-size: 24px; 
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px; 
+  margin-right: 300px;
+  
+}
+
+.sign-in-button:hover {
+  background-color: #555; 
+}
+
+select {
+  border: none;
+  font-size: 17px;
+  width: 170px;
+  appearance: none; 
+  background-image: none;
+}
+
+.main-form{
+ 
+  background-color: #232b2b; 
+  width: 60%;
+  margin: 0 auto;
+}
+
+
+
+
+ .col {
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+   
+}
+
+
+fieldset {
+    border-color: #FFF;
+    border-style: solid;
+    margin-bottom: 32px;
+    padding-bottom: 15px;
+  
+    padding-top: 15px;
+    border-radius: 5px;
+}
+
+legend {
+    font-size: 24px;
+    font-weight: 600;
+	color: #FFF;
+
+}
+
+label {
+	color: #FFF;
+	font-size: 16px;
+	
+}
+
+
+
+textarea {
+  border-color: #67DCFF;
+	height: 200px;
+	width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+    display: block;
+    border: 1px solid #FFF;
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+
+input[type="submit"] {
+    background: #000;
+    border: 2px solid;
+    border-radius: 7px;
+    color: #FFF;
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px 30px;
+}
+
+input[type="submit"]:hover {
+    background: #555;
+    color: #A31521;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
