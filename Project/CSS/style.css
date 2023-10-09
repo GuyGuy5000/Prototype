@@ -175,7 +175,7 @@ footer {
 	color: #333;
   }
   
-  .submit {
+  bu.submit {
   background-color: #333;
   border: none;
   color: #FFF;
@@ -186,7 +186,7 @@ footer {
 	
   }
   
-  .submit:hover {
+  button,.submit:hover {
 	background: #555;
  }
 
@@ -299,7 +299,7 @@ input[type="date"] {
 	margin-top: 10px;
 }
 
-input[type="submit"] {
+button,input[type="submit"] {
     background: #000;
     border: 2px solid;
     border-radius: 7px;
@@ -310,9 +310,9 @@ input[type="submit"] {
     padding: 10px 30px;
 }
 
-input[type="submit"]:hover {
-    background: #555;
-    color: #A31521;
+input[type="submit"]:hover,button:hover {
+    background: gray;
+    color: #fff;
 }
 
 input[type="file"] {
