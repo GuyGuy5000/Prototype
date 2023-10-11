@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body style="margin-left: 2%;">
+    <h1>Province Management</h1>
+
+<!-- Form to Add Province -->
+
+<form id="provinceForm">
+    <h2>Select a Province</h2>
+    <select id="provinceSelect" placeholder="select a province">
+        <!-- Populate this dynamically with existing provinces -->
+    </select>
+    <h2 style="margin-top: 50px;"> Add a province</h2>
+    <br>
+    <input type="text" id="newProvince" placeholder="Enter new province name" style="width: 20%;">
+    <br>
+    <button type="button" onclick="addProvince()" >Add</button>
+    <button type="button" onclick="deleteprovince()" >Add</button>
+        <button type="submit" onclick="updateProvince()">Update</button>
+</form>
+    
+</body>
+</html>
