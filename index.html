@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
+    <title>Homepage</title>
+</head>
+<body>
+    <header>
+            <a class="home-link" href="index.html" tabindex="1">
+                <img src="images/FixIt.png" alt="FixIt Logo" id="fixlogo">
+            </a>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <button class="dropdownbtn" tabindex="2"><i class="nav-arrow"></i> <b>Customers</b></button>
+                    <div class="dropdown-content">
+                        <a href="create_customer.html" tabindex="3"><b>Add new customer</b></a>
+                        <a href="update_customer.html" tabindex="4">Update A customer</a>
+                        <a href="view_customer.html" tabindex="5">Search for A customer</a>
+                    </div>
+                </li>
+        
+                <li class="dropdown">
+                    <button class="dropdownbtn" tabindex="6"><i class="nav-arrow"></i> Equipment</button>
+                    <div class="dropdown-content">
+                        <a href="create_equipment.html" tabindex="7">Add new Equipment</a>
+                        <a href="update_equipment.html" tabindex="8">Update Equipment</a>
+                        <a href="view_equipment.html" tabindex="9">Search for Equipment</a>
+                    </div>
+                </li>
+        
+                <li class="dropdown">
+                    <button class="dropdownbtn" tabindex="-1"><i class="nav-arrow"></i> Repairs</button>
+                    <div class="dropdown-content">
+                        <a href="index.html" tabindex="-1"><s>Add new repair</s></a>
+                        <a href="index.html" tabindex="-1"><s>Update A repair</s></a>
+                        <a href="index.html" tabindex="-1"><s>Search repairs</s></a>
+                    </div>
+                </li>
+
+                <li><a href="sign-in.html" tabindex="15"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="homepage-sign-in">
+            <div class="separator">
+            <h1>Emma's small engines</h1>
+            <p><b>Please Sign in to continue</b></p>
+            <div class="button-container">
+                <br>
+                <br>
+                <a class="sign-in-button" href="sign-in.html" tabindex="16">Sign In</a>
+            </div>
+        </div>
+        </section>
+
+        <section class="third-section">
+            <div>
+                <a class="third-section-icon" href="create_customer.html" tabindex="17">
+                <i class="fa-solid fa-user-plus icon-large"></i> 
+                <h2>CUSTOMER</h2>
+                </a>
+            </div>
+
+            <div>
+                <a class="third-section-icon" href="create_equipment.html" tabindex="18">
+                <i class="fa-solid fa-gear second-icon-large"></i>
+                <h2>EQUIPMENT</h2>
+                </a>
+            </div>
+
+            <div>
+                <a class="third-section-icon" tabindex="-1">
+                <i class="fa-solid fa-screwdriver-wrench second-icon-large"></i>
+                <h2> &ThickSpace; <s>REPAIRS</s> &ThickSpace;</h2>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h3> &copy; Webcrafters 2023</h3>
+      </footer>
+</body>
+</html>

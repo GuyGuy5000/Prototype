@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
+    <title>Web Crafters</title>
+</head>
+<body >
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/FixIt.png" alt="FixIt Logo" id="fixlogo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <button id="dropdownbtn" class="dropdownbtn"><i class="nav-arrow"></i> Customer</button>
+                    <div class="dropdown-content">
+                        <a href="create_customer.html">Add new customer</a>
+                        <a href="update_customer.html">Update A customer</a>
+                        <a href="view_customer.html">Search for A customer</a>
+                    </div>
+                </li>
+        
+                <li class="dropdown">
+                    <button id="btneq" class="dropdownbtn"><i class="nav-arrow"></i> Equipment</button>
+                    <div class="dropdown-content">
+                        <a href="create_equipment.html">Add new Equipment</a>
+                        <a href="update_equipment.html">Update Equipment</a>
+                        <a href="view_equipment.html">Search for Equipment</a>
+                    </div>
+                </li>
+        
+                <li class="dropdown">
+                    <button class="dropdownbtn"><i class="nav-arrow"></i> Repairs</button>
+                    <div class="dropdown-content">
+                        <a href="index.html">Add new repair (WIP)</a>
+                        <a href="index.html">Update A repair (WIP)</a>
+                        <a href="index.html">Search repairs (WIP)</a>
+                    </div>
+                </li>
+                
+                <li><a href="search.html" tabindex="-1"><i class="fa-solid fa-magnifying-glass" tabindex="-1"></i></a></li>
+                <li><a href="user.html" tabindex="-1"><i class="fa-solid fa-user" tabindex="-1"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+            <main>
+                <input class="dropdownbtn" type="button" id="btn" value="test">
+                <table id="tblSummary">
+                </table>
+            </main>
+        <footer>
+            <h3> <i class="fa-regular fa-copyright"></i> Webcrafters 2023</h3>
+        </footer>
+        </div>
+        <script src="JS/database.js"></script>
+        <script src="JS/detailsview.js"></script>
+</body>
+</html>

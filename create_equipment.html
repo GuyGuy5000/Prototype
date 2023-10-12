@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
+    <title>Web Crafters</title>
+
+    <script src="JS/database.js"></script>
+    <script src="JS/detailsview.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/FixIt.png" alt="FixIt Logo" id="fixlogo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                
+        
+                <li class="dropdown">
+                    <button id="btneq" class="dropdownbtn"><i class="nav-arrow"></i> Equipment</button>
+                    <div class="dropdown-content">
+                        <a href="create_equipment.html">Add new Equipment</a>
+                        <a href="update_equipment.html">Update Equipment</a>
+                        <a href="view_equipment.html">Search for Equipment</a>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <button id="dropdownbtn" class="dropdownbtn"><i class="nav-arrow"></i> Customer</button>
+                    <div class="dropdown-content">
+                        <a href="create_customer.html">Add new customer</a>
+                        <a href="update_customer.html">Update A customer</a>
+                        <a href="view_customer.html">Search for A customer</a>
+                    </div>
+                </li>
+        
+                <li class="dropdown">
+                    <button class="dropdownbtn"><i class="nav-arrow"></i> Repairs</button>
+                    <div class="dropdown-content">
+                        <a href="index.html">Add new repair (WIP)</a>
+                        <a href="index.html">Update A repair (WIP)</a>
+                        <a href="index.html">Search repairs (WIP)</a>
+                    </div>
+                </li>
+                
+                <li><a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="user.html"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div id="form-wrapper">
+        <main>
+            <div class="main-form">
+                <form action="https://webdevbasics.net/scripts/demo.php" method="post">
+                    <fieldset>
+                        <legend>Equipments</legend>
+                            <div class="col">
+                                <div>
+                                    <label for="fName"><b>Name:</b></label>
+                                    <input id="fName" name="create" type="text" placeholder="Ex: QLink" required>
+                                </div>
+                    
+                                <div>
+                                    <label for="lName"><b>Model Name:</b></label>
+                                    <input id="lName" name="create" type="text" placeholder="Ex: Recycler" required>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="col">
+                                <div>
+                                    <label for="email"><b>VIN:</b></label>
+                                    <input id="email" name="create" type="email" placeholder="Ex: 76484443" required>
+                                </div>
+
+                                <div>
+                                    <label for="address"><b>Description:</b></label>
+                                    <textarea id="address" ></textarea>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="col">    
+                                <div>
+                                    <label for="city"><b>Manufacturer:</b></label>
+                                    <select id="city" name="create" required>
+                                        <option value="">Select a manufacturer...</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="province"><b>Type:</b></label>
+                                    <select id="province" name="create" required>
+                                        <option value="">Select a type...</option>
+                                    </select>
+                                </div>  
+                            </div> 
+                            <hr>
+                           
+                            <input id="btn" type="button" onclick="GenerateSummary(EquipmentTable)" value="Create Equipment">
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+    </div>
+    <table id="tblSummary">
+    </table>
+    <footer>
+        <h3> &copy; Webcrafters 2023</h3>
+    </footer>
+    <script>
+        //Page specific code
+        let cities = document.getElementById("city");
+        let provinces = document.getElementById("province");
+        PopulateDropdown(cities, ManufacturerTable);
+        PopulateDropdown(provinces, TypeTable);
+    </script>
+</body>
+</html>
