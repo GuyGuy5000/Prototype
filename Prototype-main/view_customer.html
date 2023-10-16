@@ -67,7 +67,74 @@
         <script src="JS/nav-burger.js"></script>
     </header>
             <main>
-                <input class="dropdownbtn" type="button" onclick="GenerateSummary(CustomerTable)" id="btn" value="test">
+
+                <div class="main-form">
+            <form action="https://webdevbasics.net/scripts/demo.php" method="post">
+                <fieldset>
+                    <legend>Your Information</legend>
+                    <div class="col">
+                        <div>
+                            <label for="fName"><b>First Name:</b></label>
+                            <input id="fName" autocomplete="on" name="create" type="text" placeholder="Ex: John" required>
+                        </div>
+
+                        <div>
+                            <label for="lName"><b>Last Name:</b></label>
+                            <input id="lName" autocomplete="on" name="create" type="text" placeholder="Ex: Doe" required>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col">
+                        <div>
+                            <label for="email"><b>Email:</b></label>
+                            <input id="email" autocomplete="on" name="create" type="email" placeholder="Ex: JohnDoe123@gmail.com"
+                                required>
+                        </div>
+
+                        <div>
+                            <label for="address"><b>Address:</b></label>
+                            <input id="address" autocomplete="on" name="create" type="text" placeholder="Ex: 123 Fake Street" required>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col">
+                        <div>
+                            <a href="city.html"><i class="fa-solid fa-plus"></i></a>
+                            <label for="city"><b>City:</b></label>
+                            <select id="city" name="create" required>
+                                <option value="">Select a city...</option>
+                            </select>
+                        </div>
+                        <div>
+                            <a href="create_customer.html"><i class="fa-solid fa-plus"></i></a>
+                            <label for="province"><b>Province:</b></label>
+                            <select id="province" name="create" required>
+                                <option value="">Select a province...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col">
+                        <div>
+                            <label for="phone"><b>Phone Number:</b></label>
+                            <input id="phone" autocomplete="on" name="create" type="tel" placeholder="Ex: 1234567890" required>
+                        </div>
+                        <div>
+                            <label for="postal"><b>Postal Code:</b></label>
+                            <input id="postal" autocomplete="on" name="create" type="text" placeholder="Ex: A1B2C3" required>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button onclick="GenerateSummary(CustomerTable)" >
+                            <i class="fa-solid fa-user-plus icon-large"></i>
+                                <h2>Create Customer</h2>
+                        </button>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+                <input class="dropdownbtn" type="button" onclick="GenerateSummary(CustomerTable)" id="btn" value="Update">
                 <table id="tblSummary">
                 </table>
             </main>
