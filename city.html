@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="CSS/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
-    <title>Web Crafters</title>
+
+    <script src="JS/database.js"></script>
+    <script src="JS/cru-code.js"></script>
+    <title>Homepage</title>
 </head>
+
+
 <body>
     <header>
         <a class="home-link" href="index.html" tabindex="1">
@@ -21,8 +29,8 @@
                     <button class="dropdownbtn" tabindex="2"><i class="nav-arrow"></i>Customers</button>
                     <div class="dropdown-content">
                         <a href="create_customer.html" tabindex="3">Add new customer</a>
-                        <a href="update_customer.html" tabindex="4">Update A customer</a>
-                        <a href="view_customer.html" tabindex="5">Search for A customer</a>
+                        <a href="update_customer.html" tabindex="4">Update a customer</a>
+                        <a href="view_customer.html" tabindex="5">Search customers</a>
                     </div>
                 </li>
 
@@ -39,7 +47,7 @@
                     <button class="dropdownbtn" tabindex="-1"><i class="nav-arrow"></i>Repairs</button>
                     <div class="dropdown-content">
                         <a href="index.html" tabindex="-1"><s>Add new repair</s></a>
-                        <a href="index.html" tabindex="-1"><s>Update A repair</s></a>
+                        <a href="index.html" tabindex="-1"><s>Update a repair</s></a>
                         <a href="index.html" tabindex="-1"><s>Search repairs</s></a>
                     </div>
                 </li>
@@ -63,9 +71,35 @@
         </nav>
         <script src="JS/nav-burger.js"></script>
     </header>
+    <h1>City Management</h1>
 
-    <main>
+    <!-- Form to Add City -->
+
+    <form id="cityForm">
+        <h2>Select a City</h2>
+
+        <input list="City" id="citySelect" size="5" onchange="SelectForEdit(input, datalist, txt, btnAdd, btnUpdate)" placeholder="Select a city..." style="width: 200px;">
+        <datalist id="City">
+
+        </datalist>
         
-    </main>
+        <div class="city">
+            <h2> Add a city</h2>
+            <br>
+            <input type="text" id="newCity" placeholder="Enter new city name">
+            <br>
+            <button type="button" id="btnadd" onclick="">Add</button>
+            <button style="background-color: #6e6e6e;" type="button" id="btnedit" onclick="UpdateDropdown(input, datalist, txt, btnAdd, btnUpdate)" disabled>Update</button>
+    </form>
+    </div>
+<script>
+    let input = document.getElementById("citySelect");
+    let datalist = document.getElementById("City");
+    let txt = document.getElementById("newCity");
+    let btnAdd = document.getElementById("btnadd");
+    let btnUpdate = document.getElementById("btnedit");
+    PopulateDropdown(datalist, CityTable);
+</script>
 </body>
+
 </html>

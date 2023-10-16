@@ -1,121 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="CSS/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
 
     <script src="JS/database.js"></script>
-    <script src="JS/detailsview.js"></script>
+    <script src="JS/cru-code.js"></script>
     <title>Customer Creation Page</title>
 </head>
-<body >
+
+<body>
     <header>
         <a class="home-link" href="index.html" tabindex="1">
             <img src="images/FixIt.png" alt="FixIt Logo" id="fixlogo">
         </a>
-    <nav>
-        <ul>
-            <li class="dropdown">
-                <button class="dropdownbtn" tabindex="2"><i class="nav-arrow"></i> Customers</button>
-                <div class="dropdown-content">
-                    <a href="create_customer.html" tabindex="3">Add new customer</a>
-                    <a href="update_customer.html" tabindex="4">Update A customer</a>
-                    <a href="view_customer.html" tabindex="5">Search for A customer</a>
-                </div>
-            </li>
-    
-            <li class="dropdown">
-                <button class="dropdownbtn" tabindex="6"><i class="nav-arrow"></i> Equipment</button>
-                <div class="dropdown-content">
-                    <a href="create_equipment.html" tabindex="7">Add new Equipment</a>
-                    <a href="update_equipment.html" tabindex="8">Update Equipment</a>
-                    <a href="view_equipment.html" tabindex="9">Search for Equipment</a>
-                </div>
-            </li>
-    
-            <li class="dropdown">
-                <button class="dropdownbtn" tabindex="-1"><i class="nav-arrow"></i> Repairs</button>
-                <div class="dropdown-content">
-                    <a href="index.html" tabindex="-1"><s>Add new repair</s></a>
-                    <a href="index.html" tabindex="-1"><s>Update A repair</s></a>
-                    <a href="index.html" tabindex="-1"><s>Search repairs</s></a>
-                </div>
-            </li>
-            
-            <li><a href="search.html" tabindex="14"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-            <li><a href="sign-in.html" tabindex="15"><i class="fa-solid fa-user"></i></a></li>
-        </ul>
-    </nav>
-</header>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <button class="dropdownbtn" tabindex="2"><i class="nav-arrow"></i>Customers</button>
+                    <div class="dropdown-content">
+                        <a href="create_customer.html" tabindex="3">Add new customer</a>
+                        <a href="update_customer.html" tabindex="4">Update a customer</a>
+                        <a href="view_customer.html" tabindex="5">Search customers</a>
+                    </div>
+                </li>
 
-    <div id="form-wrapper">
-        <main>
-            <div class="main-form">
-                <form action="https://webdevbasics.net/scripts/demo.php" method="post">
-                    <fieldset>
-                        <legend>Your Information</legend>
-                            <div class="col">
-                                <div>
-                                    <label for="fName"><b>First Name:</b></label>
-                                    <input id="fName" name="create" type="text" placeholder="Ex: John" required>
-                                </div>
-                    
-                                <div>
-                                    <label for="lName"><b>Last Name:</b></label>
-                                    <input id="lName" name="create" type="text" placeholder="Ex: Doe" required>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="col">
-                                <div>
-                                    <label for="email"><b>Email:</b></label>
-                                    <input id="email" name="create" type="email" placeholder="Ex: JohnDoe123@gmail.com" required>
-                                </div>
+                <li class="dropdown">
+                    <button class="dropdownbtn" tabindex="6"><i class="nav-arrow"></i>Equipment</button>
+                    <div class="dropdown-content">
+                        <a href="create_equipment.html" tabindex="7">Add new Equipment</a>
+                        <a href="update_equipment.html" tabindex="8">Update Equipment</a>
+                        <a href="view_equipment.html" tabindex="9">Search for Equipment</a>
+                    </div>
+                </li>
 
-                                <div>
-                                    <label for="address"><b>Address:</b></label>
-                                    <input id="address" name="create" type="text" placeholder="Ex: 123 Fake Street" required>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="col">    
-                                <div>
-                                    <label for="city"><b>City:</b></label>
-                                    <select id="city" name="create" required>
-                                        <option value="">Select a city...</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="province"><b>Province:</b></label>
-                                    <select id="province" name="create" required>
-                                        <option value="">Select a province...</option>
-                                    </select>
-                                </div>  
-                            </div> 
-                            <hr>
-                            <div class="col">    
-                                <div>
-                                    <label for="phone"><b>Phone Number:</b></label>
-                                    <input id="phone" name="create" type="tel" placeholder="Ex: 1234567890" required>
-                                </div>
-                                <div>
-                                    <label for="postal"><b>Postal Code:</b></label>
-                                    <input id="postal" name="create" type="text" placeholder="Ex: A1B2C3" required>
-                                </div>  
-                            </div> 
-                            <input id="btn" type="button" onclick="GenerateSummary(CustomerTable)" value="Create">
-                    </fieldset>
-                </form>
-            </div>
-        </main>
-    </div>
-    <table id="tblSummary">
-    </table>
+                <li class="dropdown">
+                    <button class="dropdownbtn" tabindex="-1"><i class="nav-arrow"></i>Repairs</button>
+                    <div class="dropdown-content">
+                        <a href="index.html" tabindex="-1"><s>Add new repair</s></a>
+                        <a href="index.html" tabindex="-1"><s>Update a repair</s></a>
+                        <a href="index.html" tabindex="-1"><s>Search repairs</s></a>
+                    </div>
+                </li>
+                
+                <li>
+                    <a href="sign-in.html" tabindex="15"><i class="fa-solid fa-user"></i></a>
+                </li>
+
+                <li>
+                    <div class="burger-menu">
+                        <button id="burger-btn" tabindex="15" accesskey="m"><i class="fa-solid fa-bars"></i></button>
+                    </div>
+                    <div id="burger-contents" class="burger-contents">
+                        <a href="city.html" tabindex="15">Manage cities</a>
+                        <a href="index.html" tabindex="15">Manage Provinces</a>
+                        <a href="index.html" tabindex="15">Manage Manufacturers</a>
+                        <a href="index.html" tabindex="15">Manage Engine types</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <script src="JS/nav-burger.js"></script>
+    </header>
+
+    <main>
+        <div class="main-form">
+            <form action="https://webdevbasics.net/scripts/demo.php" method="post">
+                <fieldset>
+                    <legend>Your Information</legend>
+                    <div class="col">
+                        <div>
+                            <label for="fName"><b>First Name:</b></label>
+                            <input id="fName" autocomplete="on" name="create" type="text" placeholder="Ex: John" required>
+                        </div>
+
+                        <div>
+                            <label for="lName"><b>Last Name:</b></label>
+                            <input id="lName" autocomplete="on" name="create" type="text" placeholder="Ex: Doe" required>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col">
+                        <div>
+                            <label for="email"><b>Email:</b></label>
+                            <input id="email" autocomplete="on" name="create" type="email" placeholder="Ex: JohnDoe123@gmail.com"
+                                required>
+                        </div>
+
+                        <div>
+                            <label for="address"><b>Address:</b></label>
+                            <input id="address" autocomplete="on" name="create" type="text" placeholder="Ex: 123 Fake Street" required>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col">
+                        <div>
+                            <a href="city.html"><i class="fa-solid fa-plus"></i></a>
+                            <label for="city"><b>City:</b></label>
+                            <select id="city" name="create" required>
+                                <option value="">Select a city...</option>
+                            </select>
+                        </div>
+                        <div>
+                            <a href="create_customer.html"><i class="fa-solid fa-plus"></i></a>
+                            <label for="province"><b>Province:</b></label>
+                            <select id="province" name="create" required>
+                                <option value="">Select a province...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col">
+                        <div>
+                            <label for="phone"><b>Phone Number:</b></label>
+                            <input id="phone" autocomplete="on" name="create" type="tel" placeholder="Ex: 1234567890" required>
+                        </div>
+                        <div>
+                            <label for="postal"><b>Postal Code:</b></label>
+                            <input id="postal" autocomplete="on" name="create" type="text" placeholder="Ex: A1B2C3" required>
+                        </div>
+                    </div>
+                    <input id="btn" type="button" onclick="" value="Create">
+                </fieldset>
+            </form>
+        </div>
+    </main>
     <footer>
         <h3> &copy; Webcrafters 2023</h3>
     </footer>
@@ -127,4 +144,5 @@
         PopulateDropdown(provinces, ProvinceTable);
     </script>
 </body>
+
 </html>
