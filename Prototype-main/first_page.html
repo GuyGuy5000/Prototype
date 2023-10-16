@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Rep Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <a class="home-link" href="index.html" tabindex="1">
+        <img src="images/FixIt.png" alt="FixIt Logo" id="fixlogo">
+    </a>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <button class="dropdownbtn" tabindex="2"><i class="nav-arrow"></i>Customers</button>
+                <div class="dropdown-content">
+                    <a href="create_customer.html" tabindex="3">Add new customer</a>
+                    <a href="update_customer.html" tabindex="4">Update A customer</a>
+                    <a href="view_customer.html" tabindex="5">Search for A customer</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <button class="dropdownbtn" tabindex="6"><i class="nav-arrow"></i>Equipment</button>
+                <div class="dropdown-content">
+                    <a href="create_equipment.html" tabindex="7">Add new Equipment</a>
+                    <a href="update_equipment.html" tabindex="8">Update Equipment</a>
+                    <a href="view_equipment.html" tabindex="9">Search for Equipment</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <button class="dropdownbtn" tabindex="-1"><i class="nav-arrow"></i>Repairs</button>
+                <div class="dropdown-content">
+                    <a href="index.html" tabindex="-1"><s>Add new repair</s></a>
+                    <a href="index.html" tabindex="-1"><s>Update A repair</s></a>
+                    <a href="index.html" tabindex="-1"><s>Search repairs</s></a>
+                </div>
+            </li>
+            
+            <li>
+                <a href="sign-in.html" tabindex="15"><i class="fa-solid fa-user"></i></a>
+            </li>
+
+            <li>
+                <div class="burger-menu">
+                    <button id="burger-btn" tabindex="15" accesskey="m"><i class="fa-solid fa-bars"></i></a>
+                </div>
+                <div id="burger-contents" class="burger-contents">
+                    <a href="city.html" tabindex="15">Manage cities</a>
+                    <a href="index.html" tabindex="15">Manage Provinces</a>
+                    <a href="index.html" tabindex="15">Manage Manufacturers</a>
+                    <a href="index.html" tabindex="15">Manage Engine types</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <script src="JS/nav-burger.js"></script>
+</header>
+  <div class="main-container">
+    <div class="image-container">
+      <!-- You can add your image here -->
+    </div>
+    <div class="button-container">
+      <a href="login.html" class="login-button">
+        Click to Login and Start Shift
+        <span class="arrow">&#8594;</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
