@@ -391,6 +391,39 @@ select {
                     BUTTON
 ***************************************************/
 
+/******************************************************************************
+              BUTTON
+*******************************************************************************/
+.btn {
+  margin-left: 400px;
+}
+
+.btn button:hover{
+background: gray;
+color: white;
+}
+
+.btn button {
+  background-color: #FFF; 
+  color: black; 
+  padding: 10px 20px; 
+  border: none; 
+  cursor: pointer; 
+  border-radius: 4px;
+   border: 1px solid black;
+  height: 70px;
+}
+
+
+.btn i {
+  font-size: 22px; 
+  
+}
+
+.btn h2 {
+  display: block; 
+  font-size: 13px;
+}
 
 /***************************************************
                     BUTTON
