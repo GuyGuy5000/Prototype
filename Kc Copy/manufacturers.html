@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturers Management</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body style="margin-left: 2%;">
+    <h1>Manufacturers Management</h1>
+
+    <!-- Form to Add City -->
+
+    <form id="colorForm">
+        <h2>Select a Manufacturer</h2>
+  
+    <input list="Manufacturers" id="Manufacturerslist"  placeholder="type here..." />
+    <datalist id="Manufacturers">
+
+
+</datalist>
+        <h2 style="margin-top: 50px;"> Add a Manufacturer</h2>
+        <br>
+        <input type="text" id="newManufacturer" placeholder="Enter new Manufacturer name" style="width: 20%;">
+        <br>
+        <button type="button" onclick="addCity()">Add</button>
+        <button type="button" onclick="deleteCity()">Delete</button>
+        <button type="button" onclick="updateCity()">Update</button>
+    </form>
+
+    
+</body>
+</html>
