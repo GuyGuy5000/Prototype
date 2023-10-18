@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
+    <title>Equipment Search</title>
+
+    <script src="JS/database.js"></script>
+    <script src="JS/cru-code.js"></script>
+</head>
+
+<body>
+    <header>
+        <a class="home-link" href="index.html" tabindex="1">
+            <img src="images/FixIt.png" alt="FixIt Logo" id="fixlogo">
+        </a>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <button class="dropdownbtn" tabindex="2"><i class="nav-arrow"></i>Customers</button>
+                    <div class="dropdown-content">
+                        <a href="create_customer.html" tabindex="3">Add new customer</a>
+                        <a href="view_customer.html" tabindex="5">Search customers</a>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <button class="dropdownbtn" tabindex="6"><i class="nav-arrow"></i>Equipment</button>
+                    <div class="dropdown-content">
+                        <a href="create_equipment.html" tabindex="7">Add new Equipment</a>
+                        <a href="view_equipment.html" tabindex="9">Search Equipment</a>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <button class="dropdownbtn" tabindex="-1"><i class="nav-arrow"></i>Repairs</button>
+                    <div class="dropdown-content">
+                        <a href="index.html" tabindex="-1"><s>Add new repair</s></a>
+                        <a href="index.html" tabindex="-1"><s>Search repairs</s></a>
+                    </div>
+                </li>
+                
+                <li>
+                    <a href="sign-in.html" tabindex="15"><i class="fa-solid fa-user"></i></a>
+                </li>
+
+                <li>
+                    <div class="burger-menu">
+                        <button id="burger-btn" tabindex="15" accesskey="m"><i class="fa-solid fa-bars"></i></button>
+                    </div>
+                    <div id="burger-contents" class="burger-contents">
+                        <a href="city.html" tabindex="15">Manage cities</a>
+                        <a href="province.html" tabindex="15">Manage provinces</a>
+                        <a href="manufacturer.html" tabindex="15">Manage manufacturers</a>
+                        <a href="type.html" tabindex="15">Manage engine types</a>
+                        <a href="color.html" tabindex="15">Manage colors</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <script src="JS/nav-burger.js"></script>
+    </header>
+
+
+    <main>
+        <div class="btn">
+            <button onclick="GenerateSummary(EquipmentTable)">
+                <span>View Equipment</span>
+            </button>
+        </div>
+        <table id="tblSummary">
+        </table>
+
+        <div class="main-form">
+            <form id="form">
+                <fieldset>
+                    <legend>Equipment Information</legend>
+                    <div class="grid">
+                        <div class="col">
+                            <div>
+                                <label for="Name"><b>Name:</b></label>
+                                <input id="Name" name="create" type="text" placeholder="Ex: TimeMaster" required>
+                            </div>
+
+                            <div>
+                                <label for="Model"><b>Model:</b></label>
+                                <input id="Model" name="create" type="text" placeholder="Ex: Kohler" required>
+                            </div>
+
+                            <div class="vin">
+                                <label for="vin"><b>VIN:</b></label>
+                                <input id="vin" name="create" type="number" placeholder="Ex: 76484443" required>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="col">
+                            <div class="txtDesc">
+                                <label for="description"><b>Description:</b></label>
+                                <textarea id="description"></textarea>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="col">
+                            <div>
+                                <a href="index.html"><i class="fa-solid fa-plus"></i></a>
+                                <label for="manufacturer"><b>Manufacturer:</b></label>
+                                <select id="manufacturer" name="create" required>
+                                    <option value="">Select a manufacturer...</option>
+                                </select>
+                            </div>
+                            <div>
+                                <a href="index.html"><i class="fa-solid fa-plus"></i></a>
+                                <label for="type"><b>Type:</b></label>
+                                <select id="type" name="create" required>
+                                    <option value="">Select a type...</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <a href="index.html"><i class="fa-solid fa-plus"></i></a>
+                                <label for="color"><b>Color:</b></label>
+                                <select id="color" name="create" required>
+                                    <option value="">Select a color...</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="btn">
+                        <button>
+                            <i class="fa-solid fa-gear icon-large"></i>
+                            <span>Create Equipment</span>
+                        </button>
+                    </div>
+
+
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h3> <i class="fa-regular fa-copyright"></i> Webcrafters 2023</h3>
+    </footer>
+    <script>
+        //Page specific code
+        let manufacturers = document.getElementById("manufacturer");
+        let types = document.getElementById("type");
+        let colors = document.getElementById("color");
+        PopulateDropdown(manufacturers, ManufacturerTable);
+        PopulateDropdown(types, TypeTable);
+        PopulateDropdown(colors, ColourTable);
+    </script>
+</body>
+
+</html>
