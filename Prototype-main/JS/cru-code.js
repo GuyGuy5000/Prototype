@@ -18,7 +18,7 @@ function GenerateSummary(table) {
             output += `<td>${value}</td>`;
 
         }
-        output += `<td><a href="#form">Select</a></td></tr>`;
+        output += `<td><a href="#form">Edit</a></td></tr>`;
 
     }
     tblSummary.innerHTML = output; //displays results in table

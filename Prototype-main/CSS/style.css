@@ -105,6 +105,8 @@ header img { width: 150px; }
 .dropdown-content:has( *:focus) { top: 41px; }
 /*Nav Dropdown*/
 
+.fa-user {color: #000;}
+
 /*Hamburger Menu*/
 .burger-menu{
   margin-left: 0;
@@ -226,7 +228,7 @@ footer {
 ***************************************************/
 
 /***************************************************
-              CUSTOMER & EQUIPMENT CREATE PAGE
+          CUSTOMER & EQUIPMENT CREATE PAGE
 ***************************************************/
 label {
 	color: #000000;
@@ -240,8 +242,7 @@ label {
   width: 70%;
 }
 
-.main-form,
-fieldset { height: 650px; }
+
 
 .col {
   display: grid;
@@ -249,7 +250,7 @@ fieldset { height: 650px; }
   grid-template-columns: 1fr 1fr;
   margin-left: 20px;
   text-align: left;
-  height: 100px;
+  height: 60px;
 }
 
 .txtBox { margin-left: 50px; }
@@ -291,9 +292,10 @@ font-weight: 600;
 	outline: none;
 }
   
-.form-group .label-name {
+form label {
 	bottom: 0;
 	color: #000000;
+  display: block;
 	font-size: 16px;
 	pointer-events: none;
 	transition: all 0.3s ease;
@@ -306,7 +308,7 @@ input[type="button"],
 select {
   border: 1px solid #000000;
   border-radius: 5px;
-  display: block;
+  display: inline-block;
   height: 30px;
 	margin: 10px 0;
   width: 200px;
@@ -413,7 +415,25 @@ color: black;
 
 .btn button span {
   /* Add styles for the text */
-  font-size: 17px;
+  font-weight: bold;
+}
+
+/*small version of button*/
+.btn-small{
+  display: inline;
+  margin: 0 5px;
+  min-width: 0;
+  max-width: 100px;
+}
+
+.btn-small button {
+  min-width: 0;
+  max-width: 100px;
+  height: 50px;
+}
+
+.btn-small span{
+  font-size: 13px;
   font-weight: bold;
 }
 /***************************************************
@@ -468,7 +488,7 @@ input[type="file"] { margin-top: 10px; }
 
 #description {
   border: 1px solid black;
-  height:80px;
+  height: 50px;
   width: 900px;
 }
 
@@ -541,5 +561,6 @@ tr { border: 2px solid #000;}
 /**********************************************
               SUMMARY TABLE
 ***********************************************/
+
 
 
