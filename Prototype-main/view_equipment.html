@@ -18,152 +18,25 @@
 </head>
 
 <body>
-    <header>
-        <a class="home-link" href="index.html" tabindex="1">
-            <img src="images/FixIt.png" alt="FixIt Logo" id="fixlogo">
-        </a>
-        <nav>
-            <ul>
-                <li class="dropdown">
-                    <button class="dropdownbtn" tabindex="2"><i class="nav-arrow"></i>Customers</button>
-                    <div class="dropdown-content">
-                        <a href="create_customer.html" tabindex="3">Add new customer</a>
-                        <a href="view_customer.html" tabindex="5">Search customers</a>
-                    </div>
-                </li>
-
-                <li class="dropdown">
-                    <button class="dropdownbtn" tabindex="6"><i class="nav-arrow"></i>Equipment</button>
-                    <div class="dropdown-content">
-                        <a href="create_equipment.html" tabindex="7">Add new Equipment</a>
-                        <a href="view_equipment.html" tabindex="9">Search Equipment</a>
-                    </div>
-                </li>
-
-                <li class="dropdown">
-                    <button class="dropdownbtn" tabindex="-1"><i class="nav-arrow"></i>Repairs</button>
-                    <div class="dropdown-content">
-                        <a href="index.html" tabindex="-1"><s>Add new repair</s></a>
-                        <a href="index.html" tabindex="-1"><s>Search repairs</s></a>
-                    </div>
-                </li>
-
-                <li class="dropdown">
-                    <button class="dropdownbtn" tabindex="-1"><i class="nav-arrow"></i>Maintenance</button>
-                    <div class="dropdown-content">
-                        <a href="city.html" tabindex="15">Manage cities</a>
-                        <a href="province.html" tabindex="15">Manage provinces</a>
-                        <a href="manufacturer.html" tabindex="15">Manage manufacturers</a>
-                        <a href="type.html" tabindex="15">Manage engine types</a>
-                        <a href="color.html" tabindex="15">Manage colors</a>
-                    </div>
-                </li>
-
-                <li>
-                    <a href="sign-in.html" tabindex="15"><i class="fa-solid fa-user"></i></a>
-                </li>
-            </ul>
-        </nav>
+    <header id="header">
     </header>
 
     <main>
+        <h1>Add search function</h1>
         <div class="btn">
-            <button onclick="GenerateSummary(EquipmentTable)">
+            <button onclick="GenerateSummary(JoinEquipment(), true, false)">
                 <span>View Equipment</span>
             </button>
         </div>
         <table id="tblSummary">
         </table>
 
-        <div class="main-form">
-            <form id="form">
-                <fieldset>
-                    <legend>Equipment Information</legend>
-                    <div class="grid">
-                        <div class="col">
-                            <div>
-                                <label for="Name"><b>Name:</b></label>
-                                <input id="Name" name="create" type="text" placeholder="Ex: TimeMaster" required>
-                            </div>
 
-                            <div>
-                                <label for="Model"><b>Model:</b></label>
-                                <input id="Model" name="create" type="text" placeholder="Ex: Kohler" required>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="vin">
-                                <label for="vin"><b>VIN:</b></label>
-                                <input id="vin" name="create" type="number" placeholder="Ex: 76484443" required>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="col">
-                            <div class="txtDesc">
-                                <label for="description"><b>Description:</b></label>
-                                <textarea id="description"></textarea>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="col">
-                            <div>
-                                <label for="manufacturer"><b>Manufacturer:</b></label>
-                                <select id="manufacturer" name="create" required>
-                                    <option value="">Select a manufacturer...</option>
-                                </select>
-                                <a href="manufacturer.html"><i class="fa-solid fa-plus"></i></a>
-                            </div>
-                            <div>
-                                <label for="type"><b>Type:</b></label>
-                                <select id="type" name="create" required>
-                                    <option value="">Select a type...</option>
-                                </select>
-                                <a href="type.html"><i class="fa-solid fa-plus"></i></a>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div>
-                                <label for="color"><b>Color:</b></label>
-                                <select id="color" name="create" required>
-                                    <option value="">Select a color...</option>
-                                </select>
-                                <a href="color.html"><i class="fa-solid fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="btn">
-                        <button>
-                            <i class="fa-solid fa-gear icon-large"></i>
-                            <span>Create Equipment</span>
-                        </button>
-                    </div>
-                    <div class="btn btn-small">
-                        <button onclick="history.back()" formnovalidate>
-                            <span>Back</span>
-                        </button>
-                    </div>
-                    <div class="btn btn-small">
-                        <button type="reset">
-                            <span>Clear</span>
-                        </button>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
     </main>
     <footer>
         <h3> <i class="fa-regular fa-copyright"></i> Webcrafters 2023</h3>
     </footer>
-    <script>
-        //Page specific code
-        let manufacturers = document.getElementById("manufacturer");
-        let types = document.getElementById("type");
-        let colors = document.getElementById("color");
-        PopulateDropdown(manufacturers, ManufacturerTable);
-        PopulateDropdown(types, TypeTable);
-        PopulateDropdown(colors, ColourTable);
-    </script>
+    <script src="JS/header-template.js"></script>
 </body>
 
 </html>
