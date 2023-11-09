@@ -1,5 +1,5 @@
 /************************generates summary using tables from database**************************/
-function GenerateSummary(table) {
+function GenerateSummary(table, equimpentBool, repairsBool) {
     let tblSummary = document.getElementById("tblSummary");
     let output = "<tr>"; //start with opening tags for tr and th
     for (let dict of table) {
@@ -15,10 +15,15 @@ function GenerateSummary(table) {
         output += "</tr>"; //closes headings table row and starts new tr
 
         for (let [key, value] of Object.entries(dict)) { //generates a table data cell for all keys of a dictionary
-            output += `<td>${value}</td>`;
+            output += `<td style="max-width: 300px; height: 50px">${value}</td>`;
 
         }
-        output += `<td><a href="#form">Edit</a></td></tr>`;
+        if (equimpentBool)
+            output += `<td><a href="edit.html#form">Edit</a></td></tr>`;
+        else if (repairsBool)
+            output += `<td><a href="view_repairs.html">Select</a></td></tr>`;
+        else
+            output += `<td><a href="edit.html">Edit</a></td></tr>`;
 
     }
     tblSummary.innerHTML = output; //displays results in table

@@ -1,4 +1,42 @@
 //----------Seed Data---------//
+var RepairsTable = [
+    Repair(
+        "Nov 9th, 2022",
+        "10:28 AM",
+        "1:42 PM",
+        "3.1 hours",
+        "Making a funny 'wheeeeeeee' sort of noise.",
+        "Yes"
+    ),
+
+    Repair(
+        "Nov 9th, 2022",
+        "1:53 PM",
+        "3:24 PM",
+        "2.7 hours",
+        "Engine is missing the engine block, cranckshaft, pistons, timing belt, flywheel, distributor, and the carburetor",
+        "No"
+    ),
+
+    Repair(
+        "Nov 9th, 2022",
+        "3:34 PM",
+        "7:13 PM",
+        "4.7 hours",
+        "It don't work too good...",
+        "No"
+    ),
+
+    Repair(
+        "Nov 10th, 2022",
+        "10:32 AM",
+        "12:32 PM",
+        "1 hour",
+        "the engine seems to have exploded and now it won't start. Customer tried to re-assemble it with duct tape and a glue stick but to no avail. Try using something stronger like super glue maybe...",
+        "Yes"
+    ),
+];
+
 var CustomerTable = [
     Customer(
         "Nadav", 
@@ -190,16 +228,20 @@ function Details(record){
 /*************************************************************************
                                 Join
  **************************************************************************/
-function Join(){
+function JoinCustomer(){
     let join = CustomerTable;
     for (let customer of join){
-        customer["Equipment"] = EquipmentTable[CustomerEquipmentTable[CustomerTable.indexOf(customer)]["Equip"]]["Name"];
-        customer["Model"] = EquipmentTable[CustomerEquipmentTable[CustomerTable.indexOf(customer)]["Equip"]]["Model"];
-        customer["VIN"] = EquipmentTable[CustomerEquipmentTable[CustomerTable.indexOf(customer)]["Equip"]]["VIN"];
-        customer["Description"] = EquipmentTable[CustomerEquipmentTable[CustomerTable.indexOf(customer)]["Equip"]]["Description"];
+        customer["Equipment Count"] = CustomerEquipmentTable[CustomerTable.indexOf(customer)]["Equip"] + 1;
     }
-    console.log(join);
+    return join
+}
 
+function JoinEquipment(){
+    let join = EquipmentTable;
+    for (let equipment of join){
+        equipment["Customer"] = CustomerTable[CustomerEquipmentTable[EquipmentTable.indexOf(equipment)]["Cust"]]["First"] + " " + CustomerTable[CustomerEquipmentTable[EquipmentTable.indexOf(equipment)]["Cust"]]["Last"];
+    }
+    return join;
 }
 
 /**************************************************************************
@@ -300,6 +342,20 @@ function CustomerEquipment(customerIndex, equipmentIndex){
         Equip: equipmentIndex
     }
     return custEquip;
+}
+
+
+//----------------------Repairs table---------------------------//
+function Repair(dateStarted,startTime, endTime, totalTime, notes, warranty){
+    let repair = {
+        'Date Started': dateStarted,
+        'Start time': startTime,
+        'End Time': endTime,
+        'Total Time': totalTime,
+        'notes': notes,
+        'Warranty': warranty
+    }
+    return repair;
 }
 
 //------------------Equipment look up table---------------------//
