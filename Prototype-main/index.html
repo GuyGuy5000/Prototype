@@ -16,7 +16,9 @@
 
 <body>
     <header id="header">
+
     </header>
+
     <main>
         <section class="homepage-sign-in">
             <h1>Emma's Small Engines</h1>
@@ -32,15 +34,8 @@
                 </a>
             </div>
 
-            <!-- <div>
-                <a class="third-section-icon" href="view_equipment.html" tabindex="18">
-                    <i class="fa-solid fa-gear second-icon-large"></i>
-                    <h2>EQUIPMENT</h2>
-                </a>
-            </div> -->
-
             <div>
-                <a class="third-section-icon" href="view_repairs.html" tabindex="-1">
+                <a class="third-section-icon" href="view_repairs.html" tabindex="18">
                     <i class="fa-solid fa-screwdriver-wrench second-icon-large"></i>
                     <h2> &ThickSpace; REPAIRS &ThickSpace;</h2>
                 </a>
@@ -51,6 +46,15 @@
         <h3> &copy; Webcrafters 2023</h3>
     </footer>
     <script src="JS/header-template.js"></script>
+    <script src="JS/context-help.js"></script>
+    <script>
+        GenerateContextHelp(["<p>This is the homepage help icon. Each page contains a help icon that provides contextual help for that page</p>",
+            "<p>You can sign in by pressing the 'sign in' icon at the top right of the page</p>",
+            "<p>The navigation bar's 'Customers' tab will let you add customers, or search for existing ones.</p>",
+            "<p>The navigation bar's 'Repair' tab will let you create a repair request, or see the list of existing repair requests.</p>",
+            "<p>Clicking the 'CUSTOMERS' button will take you to the customer search page.</p>",
+            "<p>Clicking the 'REPAIRS' button will take you to the repairs list page.</p>"])
+    </script>
 </body>
 
 </html>

@@ -22,6 +22,7 @@
     </header>
 
     <main>
+        <div id="customer-collapse" class="collapse">
         <div class="main-form">
             <form>
                 <fieldset>
@@ -114,82 +115,84 @@
                 </fieldset>
             </form>
         </div>
+        </div>
+        <div id="equipment-collapse" class="collapse">
+            <div id="form" class="main-form">
+                <form>
+                    <fieldset>
+                        <legend id="legend">Equipment Information</legend>
+                        <div>
+                            <div class="col">
+                                <div>
+                                    <label for="Name"><b>Name:</b></label>
+                                    <input id="Name" name="create" type="text" placeholder="Ex: TimeMaster" required>
+                                </div>
 
-        <div id="form" class="main-form">
-            <form>
-                <fieldset>
-                    <legend id="legend">Equipment Information</legend>
-                    <div class="grid">
-                        <div class="col">
-                            <div>
-                                <label for="Name"><b>Name:</b></label>
-                                <input id="Name" name="create" type="text" placeholder="Ex: TimeMaster" required>
+                                <div>
+                                    <label for="Model"><b>Model:</b></label>
+                                    <input id="Model" name="create" type="text" placeholder="Ex: Kohler" required>
+                                </div>
                             </div>
-
-                            <div>
-                                <label for="Model"><b>Model:</b></label>
-                                <input id="Model" name="create" type="text" placeholder="Ex: Kohler" required>
+                            <div class="col">
+                                <div class="vin">
+                                    <label for="vin"><b>VIN:</b></label>
+                                    <input id="vin" name="create" type="number" placeholder="Ex: 76484443" required>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="vin">
-                                <label for="vin"><b>VIN:</b></label>
-                                <input id="vin" name="create" type="number" placeholder="Ex: 76484443" required>
+                            <hr>
+                            <div class="col">
+                                <div class="txtDesc">
+                                    <label for="description"><b>Description:</b></label>
+                                    <textarea id="description"></textarea>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="col">
+                                <div>
+                                    <label for="manufacturer"><b>Manufacturer:</b></label>
+                                    <select id="manufacturer" name="create" required>
+                                        <option value="">Select a manufacturer...</option>
+                                    </select>
+                                    <a href="manufacturer.html"><i class="fa-solid fa-plus"></i></a>
+                                </div>
+                                <div>
+                                    <label for="type"><b>Type:</b></label>
+                                    <select id="type" name="create" required>
+                                        <option value="">Select a type...</option>
+                                    </select>
+                                    <a href="type.html"><i class="fa-solid fa-plus"></i></a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <label for="color"><b>Color:</b></label>
+                                    <select id="color" name="create" required>
+                                        <option value="">Select a color...</option>
+                                    </select>
+                                    <a href="color.html"><i class="fa-solid fa-plus"></i></a>
+                                </div>
                             </div>
                         </div>
                         <hr>
-                        <div class="col">
-                            <div class="txtDesc">
-                                <label for="description"><b>Description:</b></label>
-                                <textarea id="description"></textarea>
-                            </div>
+                        <div class="btn">
+                            <button>
+                                <i class="fa-solid fa-gear icon-large"></i>
+                                <span>Update Equipment</span>
+                            </button>
                         </div>
-                        <hr>
-                        <div class="col">
-                            <div>
-                                <label for="manufacturer"><b>Manufacturer:</b></label>
-                                <select id="manufacturer" name="create" required>
-                                    <option value="">Select a manufacturer...</option>
-                                </select>
-                                <a href="manufacturer.html"><i class="fa-solid fa-plus"></i></a>
-                            </div>
-                            <div>
-                                <label for="type"><b>Type:</b></label>
-                                <select id="type" name="create" required>
-                                    <option value="">Select a type...</option>
-                                </select>
-                                <a href="type.html"><i class="fa-solid fa-plus"></i></a>
-                            </div>
+                        <div class="btn btn-small">
+                            <button onclick="history.back()" formnovalidate>
+                                <span>Back</span>
+                            </button>
                         </div>
-                        <div class="col">
-                            <div>
-                                <label for="color"><b>Color:</b></label>
-                                <select id="color" name="create" required>
-                                    <option value="">Select a color...</option>
-                                </select>
-                                <a href="color.html"><i class="fa-solid fa-plus"></i></a>
-                            </div>
+                        <div class="btn btn-small">
+                            <button type="reset">
+                                <span>Clear</span>
+                            </button>
                         </div>
-                    </div>
-                    <hr>
-                    <div class="btn">
-                        <button>
-                            <i class="fa-solid fa-gear icon-large"></i>
-                            <span>Update Equipment</span>
-                        </button>
-                    </div>
-                    <div class="btn btn-small">
-                        <button onclick="history.back()" formnovalidate>
-                            <span>Back</span>
-                        </button>
-                    </div>
-                    <div class="btn btn-small">
-                        <button type="reset">
-                            <span>Clear</span>
-                        </button>
-                    </div>
-                </fieldset>
-            </form>
+                    </fieldset>
+                </form>
+            </div>
         </div>
     </main>
 
@@ -206,12 +209,29 @@
         PopulateDropdown(provinces, ProvinceTable);
         PopulateDropdown(ctypes, TypeTable);
 
+        let equipmentCollapse = document.getElementById("equipment-collapse");
+        let collapse = document.getElementById("customer-collapse");
+        if (window.location.href.includes("customer"))
+            collapse.style.height = "700px"
+
+        if (window.location.href.includes("equipment")) 
+            equipmentCollapse.style.height = "700px"
+
+
+            
+
+            
         function GoToForm() {
             let select = document.getElementById("ctype");
             let legend = document.getElementById("legend");
+            equipmentCollapse.style.height = "700px"
             legend.innerHTML = "[Customer Name]: Equipment Information";
-            window.location.href = "#form";
             ctypes.selectedIndex = 0;
+            window.setTimeout(function () {
+            window.location.href="#equipment-collapse"
+            document.getElementById("Name").focus();
+            }, 400);
+
         }
     </script>
 
@@ -225,6 +245,16 @@
         PopulateDropdown(colors, ColourTable);
     </script>
     <script src="JS/header-template.js"></script>
+    <script src="JS/context-help.js"></script>
+    <script>
+        GenerateContextHelp(["<p>This is the edit page. Here you can update a customer's information.</p>",
+            "<p>Filling in the form and pressing the 'Update Customer' button will update a customer's information.</p>",
+            "<p>Pressing the 'Clear' button will reset the form to before any information was entered.</p>",
+            "<p>Pressing the 'Back' button will take you back to the previous page.</p>",
+            "<p>Pressing the 'plus' icon next to a dropdown list will take you to the maintenance page for that dropdown list.</p>",
+            "<p>Selecting equipment from the 'Edit Customer Equipment' dropdown list will let you edit a customer's equipment</p>",
+        ])
+    </script>
 </body>
 
 </html>

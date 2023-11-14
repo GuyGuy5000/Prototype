@@ -123,6 +123,15 @@
         PopulateDropdown(types, TypeTable);
     </script>
     <script src="JS/header-template.js"></script>
+    <script src="JS/context-help.js"></script>
+    <script>
+        GenerateContextHelp(["<p>This page allows you to add customers to the system.</p>",
+            "<p>Filling in the form and pressing the 'Add Customer' button will add a customer to the system.</p>",
+            "<p>Pressing the 'Clear' button will reset the form to before any information was entered.</p>",
+            "<p>Pressing the 'Back' button will take you back to the previous page.</p>",
+            "<p>Pressing any of the 'plus' icons next to the dropdowns will take you to the maintenance page for that dropdown list.</p>",
+        ])
+    </script>
 </body>
 
 </html>

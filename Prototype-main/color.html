@@ -61,6 +61,14 @@
         PopulateDropdown(datalist, ColourTable);
     </script>
     <script src="JS/header-template.js"></script>
+    <script src="JS/context-help.js"></script>
+    <script>
+        let value = "color";
+        let plural = "colors";
+        GenerateContextHelp(["<p>This is a maintenance page for storing repetitive information.</p>",
+                             `<p>To add a ${value} to the database, type into the 'Update ${plural}' textbox and press the 'Add' button.</p>`,
+                             `<p>To update a ${value} in the database, search for it using the 'Select a ${value}' textbox and press the 'Update' button.</p>`])
+    </script>
 </body>
 
 </html>

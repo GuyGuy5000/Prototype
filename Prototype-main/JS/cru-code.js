@@ -16,14 +16,16 @@ function GenerateSummary(table, equimpentBool, repairsBool) {
 
         for (let [key, value] of Object.entries(dict)) { //generates a table data cell for all keys of a dictionary
             output += `<td style="max-width: 300px; height: 50px">${value}</td>`;
-
         }
         if (equimpentBool)
-            output += `<td><a href="edit.html#form">Edit</a></td></tr>`;
+            output += `<td><a href="edit.html#equipment">Edit</a></td></tr>`;
         else if (repairsBool)
             output += `<td><a href="view_repairs.html">Select</a></td></tr>`;
         else
-            output += `<td><a href="edit.html">Edit</a></td></tr>`;
+        {
+            output += `<td><a href="edit.html#customer">Edit</a></td>`;
+            output += `<td><a href="view_equipment.html">Equipment</a></td></tr>`;
+        }
 
     }
     tblSummary.innerHTML = output; //displays results in table

@@ -71,22 +71,25 @@ var CustomerTable = [
 ];
 var EquipmentTable = [
     Equipment(
+        "Repaired",
         "TimeMaster™",
         "Toro 60V MAX* 30 in. (76 cm) eTimeMaster™ PPADLM",
         "9472956395",
-        "A high end rotary lawn mower"
+        "A high end rotary lawn mower",
     ),
     Equipment(
+        "Repair On-going",
         "Recycler®",
         "60V Max* 22 in. (56cm) Recycler® Lawn Mower",
         "9465926752",
-        "A mid-range rotary lawn mower"
+        "A mid-range rotary lawn mower",
     ),
     Equipment(
+        "Repair On-going",
         "Kohler Engine 5400 Series",
         "5400 Series KS595",
         "7254958410",
-        "A 5400 series Kohler Engine for lawnmowers"
+        "A 5400 series Kohler Engine for lawnmowers",
     )
 ];
 var CustomerEquipmentTable = [
@@ -306,12 +309,13 @@ function ValidateCustomer(customerDict){
 }
 
 //-----------------Equipment record-----------------//
-function Equipment(name, model, vin, description){
+function Equipment(repaired,name, model, vin, description){
     let equipDict = {
+        RepairStatus: repaired,
         Name: name,
         Model: model,
         VIN: vin,
-        Description: description
+        Description: description,
     };
     let exception = ValidateEquipment(equipDict)
     if (exception == "")
