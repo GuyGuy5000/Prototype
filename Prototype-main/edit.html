@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
-    <title>Details Page</title>
+    <title>Edit Page</title>
 
     <script src="JS/database.js"></script>
     <script src="JS/cru-code.js"></script>
@@ -24,7 +24,7 @@
     <main>
         <div id="customer-collapse" class="collapse">
         <div class="main-form">
-            <form>
+            <form action="view_customer.html">
                 <fieldset>
                     <legend>Customer Information</legend>
                     <div class="col">
@@ -118,7 +118,7 @@
         </div>
         <div id="equipment-collapse" class="collapse">
             <div id="form" class="main-form">
-                <form>
+                <form action="view_equipment.html">
                     <fieldset>
                         <legend id="legend">Equipment Information</legend>
                         <div>
@@ -143,7 +143,7 @@
                             <div class="col">
                                 <div class="txtDesc">
                                     <label for="description"><b>Description:</b></label>
-                                    <textarea id="description"></textarea>
+                                    <textarea class="description" id="description"></textarea>
                                 </div>
                             </div>
                             <hr>

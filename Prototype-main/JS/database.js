@@ -78,7 +78,7 @@ var EquipmentTable = [
         "A high end rotary lawn mower",
     ),
     Equipment(
-        "Repair On-going",
+        "",
         "Recycler®",
         "60V Max* 22 in. (56cm) Recycler® Lawn Mower",
         "9465926752",

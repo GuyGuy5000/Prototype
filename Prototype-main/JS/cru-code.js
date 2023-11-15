@@ -17,12 +17,13 @@ function GenerateSummary(table, equimpentBool, repairsBool) {
         for (let [key, value] of Object.entries(dict)) { //generates a table data cell for all keys of a dictionary
             output += `<td style="max-width: 300px; height: 50px">${value}</td>`;
         }
-        if (equimpentBool)
-            output += `<td><a href="edit.html#equipment">Edit</a></td></tr>`;
+        if (equimpentBool){
+            output += `<td><a href="edit.html#equipment">Edit</a></td>`;
+            output += `<td><a href="repair-request.html">Repair</a></td></tr>`;
+        }
         else if (repairsBool)
-            output += `<td><a href="view_repairs.html">Select</a></td></tr>`;
-        else
-        {
+            output += `<td><a href="repair-details.html">Select</a></td></tr>`;
+        else {
             output += `<td><a href="edit.html#customer">Edit</a></td>`;
             output += `<td><a href="view_equipment.html">Equipment</a></td></tr>`;
         }
@@ -59,11 +60,23 @@ function GenerateSummaryLUT(table) {
 /************************populates a dropdown field using tables from database**************************/
 function PopulateDropdown(dropdown, table) {
     for (let dict of table)
-        for (let key in dict)
-            if (dict[key] == "Welland" || dict[key] == "Ontario")
+        for (let key in dict) {
+            if (dict[key] == "Welland" || dict[key] == "Ontario") //if the dropdown is for cities
                 dropdown.innerHTML += `<option value="${dict[key]}" selected="selected">${dict[key]}</option>`;
+
+            else if (key == "First"){ //if the dropdown is for customers
+                dropdown.innerHTML += `<option value="${dict[key]}" selected="selected">${dict[key]} ${dict["Last"]}</option>`;
+                break;
+            }
+            else if (key == "Name"){ //if the dropdown is for equipment
+                dropdown.innerHTML += `<option value="${dict["Name"]}" selected="selected">${dict["Name"]}</option>`;
+                break;
+            }
             else
                 dropdown.innerHTML += `<option value="${dict[key]}">${dict[key]}</option>`;
+
+        }
+
 }
 
 /************************populates a text field when an option is selected from a dropdown  and enables the relevant buttons**************************/

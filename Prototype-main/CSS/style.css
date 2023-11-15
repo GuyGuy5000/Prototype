@@ -85,20 +85,9 @@ header img {
   z-index: 1;
 }
 
-/* Default style for the "Customers" button */
 .dropdownbtn {
   background-color: #fff;
-  /* Default background color */
   color: #000;
-  /* Default text color */
-}
-
-/* Highlight style for the "Customers" button */
-.dropdownbtn .active {
-  background-color: #ff0000;
-  /* Red background when active */
-  color: #fff;
-  /* White text color when active */
 }
 
 .dropdown-content a {
@@ -124,8 +113,8 @@ header img {
 
 .dropdown:hover .dropdown-content,
 .dropdownbtn:focus+.dropdown-content,
-.dropdown-content:has(*:focus) {
-  top: 41px;
+.dropdown-content:focus-within {
+  top: 50px;
 }
 
 /*Nav Dropdown*/
@@ -298,7 +287,7 @@ label {
 
 .collapse {
   height: 0;
-  overflow:hidden;
+  overflow: hidden;
   transition: 0.3s;
 }
 
@@ -348,7 +337,7 @@ legend {
 }
 
 .form-group input:focus {
-  border-color: #A31521;
+  border-color: rgb(60, 122, 255);
   outline: none;
 }
 
@@ -553,8 +542,7 @@ input[type="file"] {
 /**********************************************
           CREATE EQUIPMENT ENDS HERE
 ***********************************************/
-#vin,
-#description {
+#vin {
   height: 28px;
   min-width: 200px;
 }
@@ -567,7 +555,7 @@ input[type="file"] {
   margin-right: 400px;
 }
 
-#description {
+.description {
   border: 1px solid black;
   height: 50px;
   width: 900px;
@@ -668,7 +656,7 @@ tr {
   position: fixed;
   top: 90px;
   transform: translate(-50%, -50%);
-  overflow: none;
+  overflow: hidden;
   width: 300px;
   z-index: 2;
 }
@@ -824,4 +812,16 @@ button {
 
 /**********************************************
               REPAIR REQUEST FORM
+***********************************************/
+
+/**********************************************
+              REPAIR DETAILS FORM
+***********************************************/
+.time-input{
+  border-radius: 5px;
+  height: 27px;
+  width: 200px;
+}
+/**********************************************
+              REPAIR DETAILS FORM
 ***********************************************/

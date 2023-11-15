@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
-    <title>Equipment Search</title>
+    <title>Repair Request Page</title>
 
     <script src="JS/database.js"></script>
     <script src="JS/cru-code.js"></script>
@@ -21,22 +21,17 @@
     <header id="header">
     </header>
     <main>
-
-        <table id="tblSummary">
-        </table>
-
         <div class="main-form">
-            <form id="form">
+            <form action="index.html" id="form">
                 <fieldset style="height: 500px; margin: 50px auto;">
                     <legend>Repair Request</legend>
                     <div class="grid">
                         <div>
-
-                            <input type="text" id="datePicker" readonly value="2023-11-13">
+                            <label for="datePicker"><b>Date:</b></label>
+                            <input type="text" id="datePicker" readonly value="2023-11-16">
                         </div>
 
                         <div>
-
                             <label for="customers"><b>Customers:</b></label>
                             <select id="customers" name="create" required>
                                 <option value="">Select a customer...</option>
@@ -46,7 +41,7 @@
 
                         <div>
                             <label for="equipments"><b>Start Repair:</b></label>
-                            <input type="checkbox">
+                            <input type="checkbox" checked>
                         </div>
 
                         <div>
@@ -59,15 +54,11 @@
 
                         <div class="col">
                             <div class="txtDesc">
-                                <label for="description"><b>Description:</b></label>
-                                <textarea id="description" style="width: 500px;"></textarea>
+                                <label for="description"><b>Customer's Description:</b></label>
+                                <textarea class="description" id="description" style="width: 500px;"></textarea>
                             </div>
                         </div>
-
-
-
                     </div>
-
                     <div class="btn">
                         <button>
                             <i class="fa-solid fa-gear icon-large"></i>
@@ -86,12 +77,18 @@
         let customers = document.getElementById("customers");
         let equipments = document.getElementById("equipments");
 
-        PopulateRepairDropdown(customers, CustomerTable);
-        PopulateEquipRepairDropdown(equipments, EquipmentTable);
+        PopulateDropdown(customers, CustomerTable);
+        PopulateDropdown(equipments, EquipmentTable);
 
     </script>
     <script src="JS/header-template.js"></script>
-
+    <script src="JS/context-help.js"></script>
+    <script>
+        GenerateContextHelp(["<p>To create a repair request choose a customer from the 'Customers' dropdown.</p>",
+            "<p>Then choose the customer's equipment from the 'Equipment' dropdown.</p>",
+            "<p>Enter a description of the problem as the customer describes it.</p>",
+            "<p>Press the 'Create Request' button to add a repair request to the system.</p>",
+        ])
+    </script>
 </body>
-
 </html>
