@@ -20,15 +20,17 @@
 <body>
     <header id="header">
     </header>
-
     <main>
-
         <h1 class="sc">Search Equipment</h1>
         <div class="search-container">
             <input id="search-input" type="text" list="equipment-list" required>
             <label id="placeholder-label" for="search-input">Search for equipment Ex: Kohler Engine</label>
             <datalist id="equipment-list"></datalist>
             <button id="search-button" class="Sbtn">Search</button>
+            <button id="new-button" class="Sbtn"><a href="create_equipment.html">Add New Equipment</a></button>
+        </div>
+        <div style="text-align: center; padding: 20px 0;">
+            <label id="warning" style="color: red; font-size: 22px;"></label>
         </div>
         <table id="tblSummary"></table>
     </main>

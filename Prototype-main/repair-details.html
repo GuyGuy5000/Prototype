@@ -63,20 +63,30 @@
                         <label for="parts"><b>Parts used:</b></label>
                         <textarea class="description" id="parts" readonly></textarea>
                     </div>
+                    <br>
+                    <div class="txtDesc">
+                        <label for="techDesc"><b>Technician's description:</b></label>
+                        <textarea class="description" id="techDesc"></textarea>
+                    </div>
+                    <div class="btn btn-small">
+                        <button id="reset" style="height: 35px;" onclick="return Clear()">
+                            <span>Clear</span>
+                        </button>
+                    </div>
+                    <br>
+                    <br>
+                    <div>
+                        <label for="chkFinalized" style="display: inline-block;"><b>Finish repair:</b></label>
+                        <input id="chkFinalized" type="checkbox" class="chk-finalize">
+                    </div>
                     <div class="btn">
                         <button>
-                            <i class="fa-solid fa-check"></i>
-                            <span>Finalize Repair</span>
+                            <span>End Repair</span>
                         </button>
                     </div>
                     <div class="btn btn-small">
                         <button onclick="history.back()" formnovalidate>
                             <span>Back</span>
-                        </button>
-                    </div>
-                    <div class="btn btn-small">
-                        <button type="reset">
-                            <span>Clear</span>
                         </button>
                     </div>
                 </fieldset>
@@ -98,12 +108,19 @@
     <script>
         let parts = document.getElementById("part-options");
         let description = document.getElementById("parts");
-        parts.addEventListener("change", PartSelected)
+        let techDesc = document.getElementById("techDesc");
+        parts.addEventListener("change", PartSelected);
 
         function PartSelected(){
             if (parts.value != "")
             description.innerHTML += `${parts.value}, `;
             parts.selectedIndex = 0;
+        }
+
+        function Clear(){
+            description.innerHTML = "";
+            techDesc.value = "";
+            return false;
         }
     </script>
 </body>

@@ -21,12 +21,16 @@
     <header id="header">
     </header>
     <main>
-        <h1 class="sc">Search Customer</h1>
+        <h1 class="sc">Search Customers</h1>
         <div class="search-container">
             <input id="search-input" type="text" list="customer-list" required>
             <label id="placeholder-label" for="search-input">Search for a customer Ex: Emmanuel James</label>
             <datalist id="customer-list"></datalist>
             <button id="search-button" class="Sbtn">Search</button>
+            <button id="new-button" class="Sbtn"><a href="create_equipment.html">Add New Customer</a></button>
+        </div>
+        <div style="text-align: center; padding: 20px 0;">
+            <label id="warning" style="color: red; font-size: 22px;"></label>
         </div>
         <table id="tblSummary"></table>
     </main>

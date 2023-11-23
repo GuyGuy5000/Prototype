@@ -9,9 +9,11 @@ searchButton.addEventListener("click", handleSearch);
 
 
 function handleInput() {
+    document.getElementById("warning").innerHTML = "";
+
     const searchTerm = searchInput.value.trim().toLowerCase();
     displaySuggestions(searchTerm);
-    if (searchTerm.length >= 2) {
+    if (searchTerm.length >= 1) {
         const matchingCustomers = CustomerTable.filter((customer) =>
             customer.First.toLowerCase().includes(searchTerm) ||
             customer.Last.toLowerCase().includes(searchTerm) ||
@@ -45,13 +47,15 @@ function handleSearch() {
     });
 
 
-    if (searchTerm.length >= 2 && matchingCustomers.length > 0) {
+    if (searchTerm.length >= 1 && matchingCustomers.length > 0) {
         clearTable();
         populateTable(matchingCustomers, false, false);
         tblSummary.style.display = "table"; // Display the table
     } else {
         clearTable();
         tblSummary.style.display = "none"; // Hide the table
+        document.getElementById("warning").innerHTML = "Search field is required";
+
     }
 }
 
@@ -59,7 +63,7 @@ function displaySuggestions(searchTerm) {
     const dataList = document.getElementById("customer-list");
     dataList.innerHTML = "";
 
-    if (searchTerm.length >= 2) {
+    if (searchTerm.length >= 1) {
         const matchingCustomers = CustomerTable.filter((customer) =>
             customer.First.toLowerCase().includes(searchTerm) ||
             customer.Last.toLowerCase().includes(searchTerm) ||
@@ -73,9 +77,7 @@ function displaySuggestions(searchTerm) {
                 dataList.appendChild(option);
             });
         } else {
-            const option = document.createElement("option");
-            option.value = "No matching customer found";
-            dataList.appendChild(option);
+            document.getElementById("warning").innerHTML = "No search results.";
         }
     }
 }
@@ -103,9 +105,9 @@ var placeholderText = document.getElementById('placeholder-label');
 
 search.addEventListener('input', function () {
     if (searchInput.value.length > 0) {
-        placeholderText.style.left = '580px';
+        placeholderText.style.left = '630px';
     } else {
-        placeholderText.style.left = '580px';
+        placeholderText.style.left = '630px';
     }
 });
 

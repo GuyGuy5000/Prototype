@@ -708,7 +708,8 @@ tr {
   margin-top: 20px;
 }
 
-#search-button {
+#search-button,
+#new-button {
   padding: 10px 20px;
   background-color: #333;
   color: #fff;
@@ -718,8 +719,19 @@ tr {
   font-size: 16px;
 }
 
-#search-button:hover {
+#search-button:hover,
+#new-button:hover {
   background-color: #555;
+}
+
+#new-button{
+  display: block;
+  margin: 5px auto;
+}
+
+#new-button a {
+  color: #FFF;
+  text-decoration: none;
 }
 
 /* Style customer details section */
@@ -765,7 +777,7 @@ button {
 
 #placeholder-label {
   position: absolute;
-  left: 580px;
+  left: 630px;
   top: 255px;
   transform: translateY(-50%);
   pointer-events: none;
@@ -821,6 +833,11 @@ button {
   border-radius: 5px;
   height: 27px;
   width: 200px;
+}
+
+.chk-finalize{
+  height: 20px;
+  width: 20px;
 }
 /**********************************************
               REPAIR DETAILS FORM
