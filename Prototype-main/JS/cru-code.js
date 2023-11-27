@@ -21,8 +21,10 @@ function GenerateSummary(table, equimpentBool, repairsBool) {
             output += `<td><a href="edit.html#equipment">Edit</a></td>`;
             output += `<td><a href="repair-request.html">Repair</a></td></tr>`;
         }
-        else if (repairsBool)
+        else if (repairsBool){
+            output += `<td><span title="Repair on-going" class="repair-status">?</span></td>`;
             output += `<td><a href="repair-details.html">Select</a></td></tr>`;
+        }
         else {
             output += `<td><a href="edit.html#customer">Edit</a></td>`;
             output += `<td><a href="view_equipment.html">Equipment</a></td></tr>`;
@@ -56,6 +58,8 @@ function GenerateSummaryLUT(table) {
     }
     tblSummary.innerHTML = output; //displays results in table
 }
+
+
 
 /************************populates a dropdown field using tables from database**************************/
 function PopulateDropdown(dropdown, table) {

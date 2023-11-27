@@ -582,7 +582,7 @@ input[type="file"] {
   width: 1260px;
 }
 
-tr {
+#tblSummary tr {
   border: 2px solid #000;
 }
 
@@ -683,6 +683,15 @@ tr {
   text-align: right;
 }
 
+
+.context-help {
+  background-color:#38F; 
+  color: #FFF;
+  cursor: help;
+  display: inline;
+  padding: 1px 5px; 
+  border-radius: 100%;
+}
 
 /**********************************************
           CONTEXT HELP ENDS HERE
@@ -841,4 +850,57 @@ button {
 }
 /**********************************************
               REPAIR DETAILS FORM
+***********************************************/
+
+/**********************************************
+                REPAIR LIST
+***********************************************/
+.repair-status{
+  background-color:#Faa; 
+  padding: 1px 5px; 
+  border-radius: 100%;
+  cursor: help;
+}
+/**********************************************
+                REPAIR LIST
+***********************************************/
+
+/**********************************************
+                 WARRANTY
+***********************************************/
+.preview-page{
+  box-shadow: 0 1px 10px #000;
+  height: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  position: relative;
+  width: 80%;
+}
+
+.warranty-table {
+  background-color: #FDFDFD;
+  border: 2px solid #000;
+  border-collapse: collapse;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 10px;
+  width: 95%;
+}
+
+.warranty-table tr {
+  border: 2px solid #000;
+}
+
+.warranty-table th,
+.warranty-table td{
+  padding: 20px 10px;
+}
+
+.warranty-table td{
+  text-align: center;
+}
+
+
+/**********************************************
+                 WARRANTY
 ***********************************************/
