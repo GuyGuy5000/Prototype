@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
+    <title>Customer Creation</title>
+
+    <script src="JS/database.js"></script>
+    <script src="JS/cru-code.js"></script>
+    <script src="JS/generate-data.js"></script>
+</head>
+
+<body>
+    <header id="header">
+    </header>
+
+    <main>
+        <div class="main-form">
+            <form action="view_equipment.html">
+                <fieldset>
+                    <legend>Customer Information</legend>
+                    <div class="col">
+                        <div>
+                            <span style="display: flex;">
+                                <i class='far fa-question-circle' title="Add Customer First Name here"
+                                    style='font-size:17px; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                                <label for="fName"><b>First Name:</b></label>
+                            </span>
+                            <input id="fName" name="create" type="text" placeholder="Ex: John" required>
+                        </div>
+
+                        <div>
+                            <span style="display: flex;">
+                                <i class='far fa-question-circle' title="Add Customer Last Name here"
+                                    style='font-size:17px; display: grid; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                                <label for="lName"><b>Last Name:</b></label>
+                            </span>
+                            <input id="lName" name="create" type="text" placeholder="Ex: Doe" required>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="col">
+                        <div>
+                            <span style="display: flex;">
+                                <i class='far fa-question-circle' title="Add Customer Email here"
+                                    style='font-size:17px; display: grid; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                                <label for="email"><b>Email:</b></label>
+                            </span>
+                            <input id="email" name="create" type="email" placeholder="Ex: JohnDoe123@gmail.com"
+                                required>
+                        </div>
+
+                        <div>
+                            <span style="display: flex;">
+                                <i class='far fa-question-circle' title="Add Customer Address here"
+                                    style='font-size:17px; display: grid; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                                <label for="address"><b>Address:</b></label>
+                            </span>
+                            <input id="address" name="create" type="text" placeholder="Ex: 123 Fake Street" required>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col">
+                        <div>
+                            <span style="display: flex;">
+                                <i class='far fa-question-circle' title="Add Customer City here, can also click the add button to add a new city"
+                                    style='font-size:17px; display: grid; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                                <label for="city"><b>City:</b></label>
+                            </span>
+                            <select id="city" required>
+                                <option value="">Select a city...</option>
+                            </select>
+                            <a href="city.html"><i class="fa-solid fa-plus"></i></a>
+                        </div>
+                        <div>
+                            <span style="display: flex;">
+                                <i class='far fa-question-circle' title="Add Customer Province here, can aslo click the add button to add a new province"
+                                    style='font-size:17px; display: grid; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                                <label for="province"><b>Province:</b></label>
+                            </span>
+                            <select id="province" required>
+                                <option value="">Select a province...</option>
+                            </select>
+                            <a href="province.html"><i class="fa-solid fa-plus"></i></a>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="col">
+                        <div>
+                            <span style="display: flex;">
+                                <i class='far fa-question-circle' title="Add Customer Phone Number here, not more than 10 digits"
+                                    style='font-size:17px; display: grid; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                                <label for="phone"><b>Phone Number:</b></label>
+                            </span>
+                            <input id="phone" name="create" type="tel" placeholder="Ex: 1234567890" maxlength="10" required>
+                        </div>
+                        <div>
+                            <span style="display: flex;">
+                                <i class='far fa-question-circle' title="Add Customer Province here with no space"
+                                    style='font-size:17px; display: grid; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                                <label for="postal"><b>Postal Code:</b></label>
+                            </span>
+                            <input id="postal" name="create" type="text" placeholder="Ex: A1B2C3" maxlength="6" required>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button>
+                            <i class="fa-solid fa-user-plus icon-large"></i>
+                            <span>Add Customer</span>
+                        </button>
+                    </div>
+                    <div class="btn btn-small">
+                        <button onclick="history.back()" formnovalidate>
+                            <span>Back</span>
+                        </button>
+                    </div>
+                    <div class="btn btn-small">
+                        <button type="reset">
+                            <span>Clear</span>
+                        </button>
+                    </div>
+                    <div class="btn btn-small">
+                        <button
+                            onclick="GenerateData('create', ['Donut','Sprinkles','donutsprinkles@gmail.com','123 flavour St.', '2195552368', 'A1B2C3']);"
+                            type="button">
+                            <span>Fill Form</span>
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h3> &copy; Webcrafters 2023</h3>
+    </footer>
+    <script>
+        //Page specific code
+        let cities = document.getElementById("city");
+        let provinces = document.getElementById("province");
+        let types = document.getElementById("type");
+        PopulateDropdown(cities, CityTable);
+        PopulateDropdown(provinces, ProvinceTable);
+        PopulateDropdown(types, TypeTable);
+    </script>
+    <script src="JS/header-template.js"></script>
+    <script src="JS/context-help.js"></script>
+    <script>
+        GenerateContextHelp(["<p>This page allows you to add customers to the system.</p>",
+            "<p>Filling in the form and pressing the 'Add Customer' button will add a customer to the system.</p>",
+            "<p>Pressing the 'Clear' button will reset the form to before any information was entered.</p>",
+            "<p>Pressing the 'Back' button will take you back to the previous page.</p>",
+            "<p>Pressing any of the 'plus' icons next to the dropdowns will take you to the maintenance page for that dropdown list.</p>",
+        ]);
+    </script>
+</body>
+
+</html>

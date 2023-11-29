@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
+    <title>Repair Request Page</title>
+
+    <script src="JS/database.js"></script>
+    <script src="JS/cru-code.js"></script>
+</head>
+
+<body>
+    <header id="header">
+    </header>
+    <main>
+        <div class="main-form">
+            <form action="index.html" id="form">
+                <fieldset style="height: 500px; margin: 50px auto;">
+                    <legend>Repair Request</legend>
+                    <div class="grid">
+                        <div>
+                            <span style="display: flex;">
+                                <i class='far fa-question-circle' title="Record Repair Date"
+                                    style='font-size:17px; display: grid; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                                <label for="datePicker"><b>Date:</b></label>
+                            </span>
+                            <input type="text" id="datePicker" readonly value="2023-11-16">
+                        </div>
+
+                        <div>
+                            <span style="display: flex;">
+                                <i class='far fa-question-circle' title="select customer from the list"
+                                    style='font-size:17px; display: grid; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                                <label for="customers"><b>Customers:</b></label>
+                            </span>
+                            <select id="customers" name="create" required>
+                                <option value="">Select a customer...</option>
+                            </select>
+                        </div>
+
+
+                        <div style="margin-top: 20px; margin-bottom: 30px;">
+                            <span style="display: flex;">
+                                <i class='far fa-question-circle' title="select to start repair"
+                                    style='font-size:17px; display: grid; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                                <label for="equipments"><b>Start Repair:</b></label>
+                            </span>
+                            <input type="checkbox" checked>
+                        </div>
+
+                        <div style="margin-top: 20px; margin-bottom: 30px;">
+                            <span style="display: flex;">
+                                <i class='far fa-question-circle' title="choose equipment type from the list"
+                                    style='font-size:17px; display: grid; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                                <label for="equipments"><b>Equipment:</b></label>
+                            </span>
+                            <select id="equipments" name="create" required>
+                                <option value="">Select equipment...</option>
+                            </select>
+                        </div>
+
+                        <div class="col">
+                            <div class="txtDesc">
+                                <span style="display: flex;">
+                                    <i class='far fa-question-circle' title="Notes from customer"
+                                        style='font-size:17px; display: grid; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                                    <label for="description"><b>Customer's Description:</b></label>
+                                </span>
+                                <textarea class="description" id="description" style="width: 500px;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button>
+                            <i class="fa-solid fa-gear icon-large"></i>
+                            <span>Create Request</span>
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h3> <i class="fa-regular fa-copyright"></i> Webcrafters 2023</h3>
+    </footer>
+    <script>
+        //Page specific code
+        let customers = document.getElementById("customers");
+        let equipments = document.getElementById("equipments");
+
+        PopulateDropdown(customers, CustomerTable);
+        PopulateDropdown(equipments, EquipmentTable);
+
+    </script>
+    <script src="JS/header-template.js"></script>
+    <script src="JS/context-help.js"></script>
+    <script>
+        GenerateContextHelp(["<p>To create a repair request choose a customer from the 'Customers' dropdown.</p>",
+            "<p>Then choose the customer's equipment from the 'Equipment' dropdown.</p>",
+            "<p>Enter a description of the problem as the customer describes it.</p>",
+            "<p>Press the 'Create Request' button to add a repair request to the system.</p>",
+        ])
+    </script>
+</body>
+
+</html>

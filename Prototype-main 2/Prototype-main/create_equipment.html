@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
+    <title>Equipment Creation</title>
+
+    <script src="JS/database.js"></script>
+    <script src="JS/cru-code.js"></script>
+    <script src="JS/generate-data.js"></script>
+</head>
+
+<body>
+    <header id="header">
+    </header>
+
+    <main>
+        <div class="main-form">
+            <form action="repair-request.html">
+                <fieldset>
+                    <legend>[Customer Name]:Equipment Information</legend>
+                    <div>
+                        <div class="col">
+                            <div>
+                                <label for="Name"><b>Name:</b></label>
+                                <input id="Name" name="create" type="text" placeholder="Ex: TimeMaster" required>
+                            </div>
+
+                            <div>
+                                <label for="Model"><b>Model:</b></label>
+                                <input id="Model" name="create" type="text" placeholder="Ex: Kohler" required>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="vin">
+                                <label for="vin"><b>VIN:</b></label>
+                                <input id="vin" name="create" type="number" placeholder="Ex: 76484443" required>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="col">
+                            <div class="txtDesc">
+                                <label for="description"><b>Description:</b></label>
+                                <textarea class="description" id="description"></textarea>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="col">
+                            <div>
+                                <label for="manufacturer"><b>Manufacturer:</b></label>
+                                <select id="manufacturer" required>
+                                    <option value="">Select a manufacturer...</option>
+                                </select>
+                                <a href="manufacturer.html"><i class="fa-solid fa-plus"></i></a>
+                            </div>
+                            <div>
+                                <label for="type"><b>Type:</b></label>
+                                <select id="type" required>
+                                    <option value="">Select a type...</option>
+                                </select>
+                                <a href="type.html"><i class="fa-solid fa-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <label for="color"><b>Color:</b></label>
+                                <select id="color" required>
+                                    <option value="">Select a color...</option>
+                                </select>
+                                <a href="color.html"><i class="fa-solid fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="btn">
+                        <button>
+                            <i class="fa-solid fa-gear icon-large"></i>
+                            <span>Create Equipment</span>
+                        </button>
+                    </div>
+                    <div class="btn btn-small">
+                        <button onclick="history.back()" formnovalidate>
+                            <span>Back</span>
+                        </button>
+                    </div>
+                    <div class="btn btn-small">
+                        <button type="reset">
+                            <span>Clear</span>
+                        </button>
+                    </div>
+                    <div class="btn btn-small">
+                        <button onclick="GenerateData('create', ['Kohler Engine 5400 Series','5400 Series KS595','8472947282']);" type="button">
+                            <span>Fill Form</span>
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h3> &copy; Webcrafters 2023</h3>
+    </footer>
+    <script>
+        //Page specific code
+        let manufacturers = document.getElementById("manufacturer");
+        PopulateDropdown(manufacturers, ManufacturerTable);
+        let types = document.getElementById("type");
+        PopulateDropdown(types, TypeTable);
+        let colors = document.getElementById("color");
+        PopulateDropdown(colors, ColourTable);
+    </script>
+    <script src="JS/header-template.js"></script>
+    <script src="JS/context-help.js"></script>
+    <script>
+        GenerateContextHelp(["<p>This page allows you to add equipment to the system.</p>",
+            "<p>Filling in the form and pressing the 'Add Equipment' button will add equipment to the system.</p>",
+            "<p>Pressing the 'Clear' button will reset the form to before any information was entered.</p>",
+            "<p>Pressing the 'Back' button will take you back to the previous page.</p>",
+            "<p>Pressing any of the 'plus' icons next to the dropdowns will take you to the maintenance page for that dropdown list.</p>",
+        ]);
+    </script>
+</body>
+
+</html>

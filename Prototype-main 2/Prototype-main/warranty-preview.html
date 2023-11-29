@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
+    <!--Charts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <title>Warrenty Report Details</title>
+
+    <script src="JS/database.js"></script>
+    <script src="JS/cru-code.js"></script>
+    <script src="JS/generate-data.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+    </header>
+    <main>
+        <div class="preview-page">
+            <h1 style="display: inline-block; margin: 25px 10px;">Waranty Report: <br> Nov 15th, 2023 - Dec 15th, 2024
+            </h1>
+            <img src="images/FixIt.png" alt="FixIt Logo" id="fixlogo" style="width: 150px; float: right;">
+            <table class="warranty-table">
+                <tbody>
+                    <tr>
+                        <th>Manufacturer</th>
+                        <th>Repair Cost</th>
+                        <th>Parts used</th>
+                        <th>Repair Time</th>
+                        <th>Date Repaired</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>Kohler</td>
+                        <td>$142.98</td>
+                        <td>sparkplug &#215;2<br>master break cylinder &#215;1</td>
+                        <td>3.1 Hours</td>
+                        <td>Nov 22rd, 2023</td>
+                    </tr>
+                    <tr>
+                        <td>Kohler</td>
+                        <td>$98.98</td>
+                        <td>piston &#215;4</td>
+                        <td>1.3 Hours</td>
+                        <td>Nov 25rd, 2023</td>
+                    </tr>
+                    <tr>
+                        <td>Kohler</td>
+                        <td>$342.49</td>
+                        <td>flywheel &#215;1<br>carburetor &#215;1<br>timing belt &#215;1</td>
+                        <td>2.6 Hours</td>
+                        <td>Dec 2nd, 2023</td>
+                    </tr>
+                    <tr>
+                        <td>Kohler</td>
+                        <td>$192.49</td>
+                        <td> Engine block &#215;1<br></td>
+                        <td>0.8 Hours</td>
+                        <td>Dec 9th, 2023</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <hr>
+            <h2 style="margin-left: 30px;">Report Details</h2>
+            <div class="col" style="text-align: center;">
+                <h3>Total Repair Cost: <u>$776.94</u></h3>
+                <h3>Total Time Spent On Repairs: <u>8 Hours</u></h3>
+                <h3 >Average Repair Cost: <u>$194.23</u></h3>
+                <h3>Number of Manufacturers Included: <u>1</u></h3>
+                <h3 >Highest Repair Cost: <u>$342.49</u></h3>
+            </div>
+            <p style="position: absolute; bottom: 20px; right: 40px;">1/2</p>
+        </div>
+
+        <div class="preview-page">
+            <h1 style="display: inline-block; margin: 25px 10px;">Waranty Report: <br> Nov 15th, 2023 - Dec 15th, 2024
+            </h1>
+            <img src="images/FixIt.png" alt="FixIt Logo" id="fixlogo" style="width: 150px; float: right;">
+            <canvas id="costChart" style="width:100%;max-width:95%; margin: 10px auto;"></canvas>
+            <p  style="position: absolute; bottom: 20px; right: 40px;">2/2</p>
+        </div>
+    </main>
+    <footer>
+        <h3> &copy; Webcrafters 2023</h3>
+    </footer>
+    <script src="JS/header-template.js"></script>
+    <script src="JS/context-help.js"></script>
+    <script>
+        GenerateContextHelp(["<p>The report preview page allows you to see a preview of the chosen report.</p>"])
+    </script>
+
+    <script>
+        const xValues = ["Nov 15th", "", "Nov 22nd", "", "Nov 29th", "", "Dec 6th", "", "Dec 15th"];
+        const yValues = [0, 0, 98.98, 142.49, 142.40, 342.49, 342.49, 192.49, 192.49];
+
+        let chart = new Chart("costChart", {
+            type: "line",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: { display: false }
+            }
+        });
+
+    </script>
+</body>
+
+</html>
