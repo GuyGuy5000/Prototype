@@ -27,7 +27,7 @@
             <label id="placeholder-label" for="search-input">Search for a customer Ex: Emmanuel James</label>
             <datalist id="customer-list"></datalist>
             <button id="search-button" class="Sbtn">Search</button>
-            <button id="new-button" class="Sbtn"><a href="create_equipment.html">Add New Customer</a></button>
+            <button id="new-button" class="Sbtn" onclick="window.location.href='create_customer.html'">Add New Customer</button>
         </div>
         <div style="text-align: center; padding: 20px 0;">
             <label id="warning" style="color: red; font-size: 22px;"></label>
@@ -40,7 +40,7 @@
     <script src="JS/header-template.js"> </script>
     <script src="JS/context-help.js"></script>
     <script>
-        GenerateContextHelp(["<p>The customer search page lets you search for a customer and edit their information.</p>",
+        GenerateContextHelp(["<p>The customer search page lets you search for a customer to edit their information.</p>",
             "<p>type into the search bar and click the 'search' button to see the results.</p>",
             "<p>After searching, press the 'edit' button to edit that customer's information.</p>",
             "<p>After searching, press the 'equipment' button to edit that customer's equipment.</p>",

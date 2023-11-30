@@ -10,6 +10,13 @@ function AddHeader() {
 <nav>
     <ul>
         <li class="dropdown">
+            <button class="dropdownbtn" tabindex="1"><i class="nav-arrow"></i>Reports</button>
+            <div class="dropdown-content">
+                <a href="warranty-details.html" tabindex="1">Warranty Report</a>
+                <a href="customreport-details.html" tabindex="1">Custom Report</a>
+            </div>
+        </li>
+        <li class="dropdown">
             <button class="dropdownbtn" tabindex="2"><i class="nav-arrow"></i>Customers</button>
             <div class="dropdown-content">
                 <a href="create_customer.html" tabindex="3">Add new customer</a>
@@ -36,11 +43,11 @@ function AddHeader() {
             </div>
         </li>
 
-        <div class="help-icon" id="help-icon">
+        <div class="help-icon" id="help-icon" accesskey="h" tabindex="15">
             <span class="icon">?</span>
         </div>
         <li>
-            <a href="sign-in.html" tabindex="15"><i class="fa-solid fa-user"></i></a>
+            <a href="sign-in.html" tabindex="16"><i class="fa-solid fa-user"></i></a>
         </li>
         <div class="help-box" id="help-box">
             <div class="help-content">
@@ -48,8 +55,8 @@ function AddHeader() {
             </div>
             <div class="help-actions">
                 <label id="pageNum" style="margin-right: 10px"></label>
-                <button id="skipBtn">Skip</button>
-                <button id="nextBtn">Next</button>
+                <button id="skipBtn" tabindex="15">Skip</button>
+                <button id="nextBtn" tabindex="15">Next</button>
             </div>
         </div>
     </ul>

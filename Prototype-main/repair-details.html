@@ -27,32 +27,39 @@
             <div class="main-form">
                 <fieldset>
                     <legend>Repair Details</legend>
-                    
+
                     <div class="col">
                         <div>
                             <label for="total-time"><b>Total time</b></label>
-                            <input id="total-time" type="text" required readonly value="3.1 hours" style=" font-size: 16px; width: 100px;">
+                            <input id="total-time" type="text" required readonly value="3.1 hours"
+                                style=" font-size: 16px; width: 100px;">
                         </div>
-                    <div>
-                    <label for="StartDate"><b>Start Time</b></label>
-                    <input class="time-input" type="time" id="StartDate" readonly value="10:28">
-                    <br>
-                    <br>
-                    <label for="EndDate"><b>End time</b></label>
-                    <input class="time-input" type="time" id="EndDate" readonly>
-                    </div>
+                        <div>
+                            <label for="StartDate"><b>Start Time</b></label>
+                            <input class="time-input" type="time" id="StartDate" readonly value="10:28">
+                            <br>
+                            <br>
+                            <label for="EndDate"><b>End time</b></label>
+                            <input class="time-input" type="time" id="EndDate" readonly>
+                        </div>
                     </div>
                     <br>
                     <br>
                     <hr>
                     <div class="txtDesc">
                         <label for="description"><b>Customer's Description:</b></label>
-                        <textarea class="description" id="description" readonly>Making a funny 'wheeeeeeee' sort of noise.</textarea>
+                        <textarea class="description" id="description"
+                            readonly>Making a funny 'wheeeeeeee' sort of noise.</textarea>
                     </div>
                     <br>
                     <br>
                     <hr>
-                    <label for="part-options"><b>Parts</b></label>
+                    <span style="display: flex;">
+                        <i class='far fa-question-circle'
+                            title="Select a part from the dropdown list to add to the 'parts used' section"
+                            style='font-size:17px; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                        <label for="part-options"><b>Parts</b></label>
+                    </span>
                     <select id="part-options">
                         <option value="">Choose a part...</option>
                         <option value="flywheel">Flywheel</option>
@@ -65,7 +72,12 @@
                     </div>
                     <br>
                     <div class="txtDesc">
-                        <label for="techDesc"><b>Technician's description:</b></label>
+                        <span style="display: flex;">
+                            <i class='far fa-question-circle'
+                                title="Enter a description of the repair process"
+                                style='font-size:17px; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                            <label for="techDesc"><b>Technician's description:</b></label>
+                        </span>
                         <textarea class="description" id="techDesc"></textarea>
                     </div>
                     <div class="btn btn-small">
@@ -100,10 +112,10 @@
     <script src="JS/context-help.js"></script>
     <script>
         GenerateContextHelp(["<p>The repair details page shows details for an on-going repair.</p>",
-                             `<p>Choosing a part from the 'Parts' dropdown will add them to the 'parts used' area.</p>`,
-                             `<p>Pressing the 'Finish repair' button will mark the repair as finished, and finalize the total time.</p>`,
-                             `<p>If you are not finished with the repair, leaving this page will log the end time and add it to the total time without marking the repair as finished.</p>`,
-                            ])
+            `<p>Choosing a part from the 'Parts' dropdown will add it to the 'parts used' area.</p>`,
+            `<p>Pressing the 'Save Repair' button will save the repair details</p>`,
+            `<p>If you are not finished with the repair, uncheck 'Finish repair' and press 'Save Repair'</p>`,
+        ])
     </script>
     <script>
         let parts = document.getElementById("part-options");
@@ -111,13 +123,13 @@
         let techDesc = document.getElementById("techDesc");
         parts.addEventListener("change", PartSelected);
 
-        function PartSelected(){
+        function PartSelected() {
             if (parts.value != "")
-            description.innerHTML += `${parts.value}, `;
+                description.innerHTML += `${parts.value}, `;
             parts.selectedIndex = 0;
         }
 
-        function Clear(){
+        function Clear() {
             description.innerHTML = "";
             techDesc.value = "";
             return false;

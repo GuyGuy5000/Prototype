@@ -17,12 +17,35 @@ function GenerateSummary(table, equimpentBool, repairsBool) {
         for (let [key, value] of Object.entries(dict)) { //generates a table data cell for all keys of a dictionary
             output += `<td style="max-width: 300px; height: 50px">${value}</td>`;
         }
-        if (equimpentBool){
+        if (equimpentBool) {
             output += `<td><a href="edit.html#equipment">Edit</a></td>`;
             output += `<td><a href="repair-request.html">Repair</a></td></tr>`;
         }
-        else if (repairsBool){
-            output += `<td><span title="Repair on-going" class="repair-status">?</span></td>`;
+        else if (repairsBool) {
+            //randomize the status of each record
+            let statuses = [{
+                'status': 'Repaired',
+                'color': 'color: rgb(51, 255, 156);',
+                'icon': 'fa-regular fa-circle-check'
+            },
+            {
+                'status': 'Repair on-going',
+                'color': 'color: rgb(255, 149, 1);',
+                'icon': 'fa-solid fa-angles-right'
+            },
+            {
+                'status': 'Repair pending',
+                'color': 'color: rgb(255, 75, 51);',
+                'icon': 'fa-regular fa-clock'
+            }
+            ];
+            let randomInt = Math.floor(Math.random() * 3);
+            output += `<td>
+                        <span style="display: flex;">
+                            <i class='${statuses[randomInt]["icon"]}' title="${statuses[randomInt]["status"]}"
+                            style='font-size:17px; text-align: center; ${statuses[randomInt]["color"]} cursor: pointer; margin-right: 5px;'></i>
+                        </span>
+                       </td>`;
             output += `<td><a href="repair-details.html">Select</a></td></tr>`;
         }
         else {
@@ -68,11 +91,11 @@ function PopulateDropdown(dropdown, table) {
             if (dict[key] == "Welland" || dict[key] == "Ontario") //if the dropdown is for cities
                 dropdown.innerHTML += `<option value="${dict[key]}" selected="selected">${dict[key]}</option>`;
 
-            else if (key == "First"){ //if the dropdown is for customers
+            else if (key == "First") { //if the dropdown is for customers
                 dropdown.innerHTML += `<option value="${dict[key]}" selected="selected">${dict[key]} ${dict["Last"]}</option>`;
                 break;
             }
-            else if (key == "Name"){ //if the dropdown is for equipment
+            else if (key == "Name") { //if the dropdown is for equipment
                 dropdown.innerHTML += `<option value="${dict["Name"]}" selected="selected">${dict["Name"]}</option>`;
                 break;
             }

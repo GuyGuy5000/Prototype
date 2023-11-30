@@ -8,6 +8,17 @@ function GenerateContextHelp(explanations) {
     let helpContent = document.querySelector('.help-content');
     let explanationIndex = 0;
 
+
+    helpIcon.addEventListener('keydown', (event) => {
+        if (event.code == "Enter"){
+            explanationIndex = 0;
+            helpBox.style.display = 'block';
+            displayExplanation(explanationIndex);
+        }
+
+    });
+
+
     helpIcon.addEventListener('click', () => {
         explanationIndex = 0;
         helpBox.style.display = 'block';

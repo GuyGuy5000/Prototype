@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
+    <title>Sales Homepage</title>
+</head>
+
+<body>
+    <header id="header">
+
+    </header>
+
+    <main>
+        <section class="homepage-sign-in">
+            <h1>Emma's Small Engines</h1>
+            <a class="indexes-sign-in-button" href="create_customer.html">
+                <i class='fas fa-edit' style='font-size:24px'></i>
+                Add Customer</a>
+        </section>
+
+        <section class="third-section">
+            <div>
+                <a class="third-section-icon" href="view_customer.html" tabindex="17">
+                    <i class="fa-solid fa-user icon-large"></i>
+                    <h2>CUSTOMERS</h2>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h3> &copy; Webcrafters 2023</h3>
+    </footer>
+    <script src="JS/sales-rep-header-template.js"></script>
+    <script src="JS/context-help.js"></script>
+    <script>
+        GenerateContextHelp(["<p>This is the sales rep Dashboard help icon.</p>",
+        "<p>click the Add customer button, to add a new customer.</p>",
+            "<p>click the customers button to search for an existing customer</p>"])
+    </script>
+</body>
+
+</html>
