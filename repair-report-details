@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
-    <title>Sales Report Details</title>
+    <title>Repair Report Details</title>
 
     <script src="JS/database.js"></script>
     <script src="JS/cru-code.js"></script>
@@ -82,7 +82,7 @@
     <script src="JS/context-help.js"></script>
     <script>
         GenerateContextHelp(["<p>The report details page allows you to configure options and generate a report.</p>",
-            "<p>Select a date and at least one manufacturer from the 'Manufacutrers' list, then press 'Generate Warranty Report'</p>",
+            "<p>Select a date and at least one tchnician from the 'Technicians' list, then click 'Generate Repair Report'</p>",
             "<p>Optional information can be generated using the checkboxes. Uncheck a checkbox to omit this information from the report.</p>"])
     </script>
 </body>
