@@ -13,6 +13,7 @@ function AddHeader() {
             <button class="dropdownbtn" tabindex="1"><i class="nav-arrow"></i>Reports</button>
             <div class="dropdown-content">
                 <a href="warranty-details.html" tabindex="1">Warranty Report</a>
+                <a href="customer-feedback-report-details.html" tabindex="1">Customer Feedback Report</a>
                 <a href="customreport-details.html" tabindex="1">Custom Report</a>
             </div>
         </li>

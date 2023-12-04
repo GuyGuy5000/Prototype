@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
-    <title>Warrenty Report Details</title>
+    <title>Custom Report Details</title>
 
     <script src="JS/database.js"></script>
     <script src="JS/cru-code.js"></script>
@@ -23,9 +23,9 @@
     </header>
     <main>
         <div class="main-form">
-            <form action="warranty-preview.html">
+            <form action="customer-feedback-report-preview.html">
                 <fieldset>
-                    <legend>Warranty Report Details</legend>
+                    <legend>Custom Report Details</legend>
                     <div class="col">
                         <div>
                             <span style="display: flex;">
@@ -45,16 +45,29 @@
                         </div>
                     </div>
                     <hr>
+                    <!--PLACE CODE HERE-->
+
                     <div class="col">
                         <div>
                             <span style="display: flex;">
                                 <i class='far fa-question-circle'
-                                    title="Ctrl + click to select multiple options. Must select at least one."
+                                    title="Select what kind of customer feedback will be added to the report"
                                     style='font-size:17px; color: blue; cursor: pointer; margin-right: 5px;'></i>
-                                <label for="manufacturer" style="display: inline;"><b>Manufacturers:</b></label>
+                                <label for="radType"><b>Services:</b></label>
                             </span>
-                            <select id="manufacturer" style="height: 65px; width: 300px;" size="5" multiple required>
-                            </select>
+                            <br>
+                            <span style="display: flex;">
+                                <input type="radio" name="radType" value="All Services" tabindex="0" checked>
+                                <label for="radType"><b>All Services</b></label>
+                            </span>
+                            <span style="display: flex;">
+                                <input type="radio" name="radType" value="Repair Service" tabindex="0">
+                                <label for="radType"><b>Repair Service</b></label>
+                            </span>
+                            <span style="display: flex;">
+                                <input type="radio" name="radType" value="Repair Service" tabindex="0">
+                                <label for="radType"><b>Customer Service</b></label>
+                            </span>
                         </div>
                     </div>
                     <br>
@@ -63,22 +76,23 @@
                         <div>
                             <span style="display: flex;">
                                 <i class='far fa-question-circle'
-                                    title="Uncheck to exclude details about the parts used for each repair"
+                                    title="Uncheck to exclude customer information along with their feedback"
                                     style='font-size:17px; color: blue; cursor: pointer; margin-right: 5px;'></i>
-                                <label for="chkParts" style="display: inline;">
-                                    <b>Display Parts used:</b>
+                                <label for="chkCustomerInfo" style="display: inline;">
+                                    <b>Include customer information:</b>
                                 </label>
-                                <input id="chkParts" type="checkbox" class="chk-finalize" style="display: flex;"
+                                <input id="chkCustomerInfo" type="checkbox" class="chk-finalize" style="display: flex;"
                                     checked>
                             </span>
                         </div>
 
                     </div>
                     <hr>
+                    <!--PLACE CODE HERE-->
                     <div class="btn">
                         <button>
                             <i class="fa-solid fa-table-list"></i>
-                            <span>Generate Warranty Report</span>
+                            <span>Generate Customer Feedback Report</span>
                         </button>
                     </div>
                     <div class="btn btn-small">
@@ -106,9 +120,8 @@
     </script>
     <script>
         GenerateContextHelp(["<p>The report details page allows you to configure options and generate a report.</p>",
-            "<p>Select a date and at least one manufacturer from the 'Manufacutrers' list, then press 'Generate Warranty Report'.</p>",
+            "<p>Select a start date and an end date, then press 'Generate Customer Feedback Report'</p>",
             "<p>Optional information can be generated using the checkboxes. Uncheck a checkbox to omit this information from the report.</p>"])
     </script>
 </body>
-
 </html>
