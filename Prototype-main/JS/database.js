@@ -6,7 +6,8 @@ var RepairsTable = [
         "1:42 PM",
         "3.1 hours",
         "Making a funny 'wheeeeeeee' sort of noise.",
-        "Yes"
+        "Yes",
+        "Completed "
     ),
 
     Repair(
@@ -15,7 +16,8 @@ var RepairsTable = [
         "3:24 PM",
         "2.7 hours",
         "Engine is missing the engine block, cranckshaft, pistons, timing belt, flywheel, distributor, and the carburetor",
-        "No"
+        "No",
+        "Paused "
     ),
 
     Repair(
@@ -24,7 +26,8 @@ var RepairsTable = [
         "7:13 PM",
         "4.7 hours",
         "It don't work too good...",
-        "No"
+        "No",
+        "Paused "
     ),
 
     Repair(
@@ -33,7 +36,8 @@ var RepairsTable = [
         "12:32 PM",
         "1 hour",
         "the engine seems to have exploded and now it won't start. Customer tried to re-assemble it with duct tape and a glue stick but to no avail. Try using something stronger like super glue maybe...",
-        "Yes"
+        "Yes",
+        "Completed "
     ),
 ];
 
@@ -350,14 +354,16 @@ function CustomerEquipment(customerIndex, equipmentIndex){
 
 
 //----------------------Repairs table---------------------------//
-function Repair(dateStarted,startTime, endTime, totalTime, notes, warranty){
+function Repair(dateStarted,startTime, endTime, totalTime, notes, warranty, status){
     let repair = {
         'Date Started': dateStarted,
         'Start time': startTime,
-        'End Time': endTime,
+        'End/Pause Time': endTime,
         'Total Time': totalTime,
         'notes': notes,
-        'Warranty': warranty
+        'Warranty': warranty,
+        'Status': status
+       
     }
     return repair;
 }

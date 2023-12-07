@@ -848,6 +848,20 @@ button {
   height: 20px;
   width: 20px;
 }
+
+#pauseBtn:hover{
+  font-size: larger;
+  color: #fff;
+  background-color: red;
+  
+}
+
+#saveBtn:hover{
+  font-size:larger;
+  color: #fff;
+  background-color: green;
+  
+}
 /**********************************************
               REPAIR DETAILS FORM
 ***********************************************/
@@ -902,91 +916,27 @@ button {
 
 
 /**********************************************
-                 WARRANTY
+                 WARRANTY END
 ***********************************************/
 
 /**********************************************
-                 NEW INDEX PROPERTY CSS
+                 SUPPORT
 ***********************************************/
-.login-person {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-right: 20px;
-  margin-left: 220px;
-  margin-top: 47px;
-  justify-content: center;
-}
 
-.login-person div {
-  width: 220px;
-  border: 3px solid rgb(17, 17, 17);
-  border-radius: 9px;
-}
-
-.login-person div i {
-  margin-top: 20px;
-  margin-left: 62px;
-}
-
-.login-person div h2 {
-  justify-content: center;
-  margin-left: 43px;
-}
-
-.login-person-icon:hover {
-  color: #5e5e5e;
-}
-
-.indexes-section {
-  border-top: 3px solid #000000;
-  border-bottom: 2px solid #000000;
+.inputs{
   display: flex;
-  height: 400px;
-  justify-content: space-around;
+  margin-top: 30px;
 }
 
-.indexes-section div {
-  border: solid rgba(0, 0, 0, 0.815) 5px;
-  border-radius: 10%;
-  margin: 20px 0;
-  margin-top: 80px;
-  max-height: 120px;
-  min-width: 130px;
-  padding: 20px;
+#sName{
+  width: 700px;
+  margin-right: 50px;
+
+  
 }
 
-.indexes-section div i {
-  margin-left: 45px;
+.msgInputs {
+  position: absolute;
+  right: 400px;
 }
 
-.indexes-section-icon {
-  color: rgb(0, 0, 0);
-  display: inline-block;
-  height: auto;
-  width: auto;
-}
-
-.indexes-section:hover {
-  color: #5e5e5e;
-}
-
-.indexes-sign-in-button {
-  background-color: #333;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 24px;
-  margin: 8px auto;
-  min-height: 26px;
-  padding: 10px 20px;
-  text-decoration: none;
-  width: 245px;
-}
-
-.indexes-sign-in-button:hover {
-  background-color: #555;
-}
-/**********************************************
-                 NEW INDEX PROPERTY CSS
-***********************************************/

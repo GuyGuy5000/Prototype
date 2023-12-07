@@ -1,0 +1,71 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
+    <title>Contact Customers Page</title>
+</head>
+
+<body>
+    <header id="header">
+    </header>
+    <main>
+        <div class="main-form">
+            <form action="index.html" id="form">
+                <fieldset style="height: 500px; margin: 50px auto;">
+                    <legend>Message to Customers</legend>
+                    <div class="">
+                     
+                        <div class="inputs">
+                            <div>
+                                <label for="sName"><b>Subject:</b></label>
+                                <input class="" id="sName" name="create" type="text"  placeholder="Ex: Reminder to pickup equipments">
+                            </div>
+                            <div>
+                                <label for="chkFinalized" style="display: inline-block; margin-top: 40px;  "><b >All Customers:</b></label>
+                                <input id="chkFinalized"  type="checkbox" class="chk-finalize">
+                            </div>
+                            <div class="msgInputs">
+                               
+                                <label for="fName"><b>To:</b></label>
+                                <input type="text"  placeholder="Ex: nadavhilu@gmail.com" >
+                            </div>
+                        </div>
+                        
+
+                        <div class="col">
+                            <div class="txtDesc">
+                                <label for="description"><b>New Message:</b></label>
+                                <textarea class="description" id="description" style="width: 900px; height: 300px;"></textarea>
+                            </div>
+                        </div>
+                     
+                    </div>
+                    
+                </fieldset>
+                <div class="btn" id="messageBtn">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>Send Message</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h3> &copy; Webcrafters 2023</h3>
+    </footer>
+    <script src="JS/header-template.js"></script>
+</body>
+
+</html>

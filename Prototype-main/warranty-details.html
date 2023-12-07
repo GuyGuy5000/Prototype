@@ -28,31 +28,21 @@
                     <legend>Warranty Report Details</legend>
                     <div class="col">
                         <div>
-                            <span style="display: flex;">
-                                <i class='far fa-question-circle' title="Starting date for the report."
-                                    style='font-size:17px; color: blue; cursor: pointer; margin-right: 5px;'></i>
-                                <label for="from"><b>From:</b></label>
-                            </span>
+                            <label for="from"><b>From:</b></label>
                             <input id="from" class="time-input" name="create" type="date" value="2023-11-15">
                         </div>
                         <div>
-                            <span style="display: flex;">
-                                <i class='far fa-question-circle' title="Ending date for the report."
-                                    style='font-size:17px; color: blue; cursor: pointer; margin-right: 5px;'></i>
-                                <label for="to"><b>To:</b></label>
-                            </span>
-                            <input id="to" class="time-input" name="create" type="date" value="2023-12-15">
+                            <label for="to"><b>To:</b></label>
+                            <input id="to" class="time-input" name="create" type="date" value="2024-12-15">
                         </div>
                     </div>
                     <hr>
                     <div class="col">
                         <div>
-                            <span style="display: flex;">
-                                <i class='far fa-question-circle'
-                                    title="Ctrl + click to select multiple options. Must select at least one."
-                                    style='font-size:17px; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                            <div style="display: block;">
+                                <span title="Ctrl + click to select multiple options" class="context-help">?</span>
                                 <label for="manufacturer" style="display: inline;"><b>Manufacturers:</b></label>
-                            </span>
+                            </div>
                             <select id="manufacturer" style="height: 65px; width: 300px;" size="5" multiple required>
                             </select>
                         </div>
@@ -61,18 +51,14 @@
                     <hr>
                     <div class="col">
                         <div>
-                            <span style="display: flex;">
-                                <i class='far fa-question-circle'
-                                    title="Uncheck to exclude details about the parts used for each repair"
-                                    style='font-size:17px; color: blue; cursor: pointer; margin-right: 5px;'></i>
-                                <label for="chkParts" style="display: inline;">
-                                    <b>Display Parts used:</b>
-                                </label>
-                                <input id="chkParts" type="checkbox" class="chk-finalize" style="display: flex;"
-                                    checked>
-                            </span>
+                            <label for="chkOnGoing" style="display: inline-block; margin: auto;"><b>Display Parts used:</b></label>
+                            <input id="chkOnGoing" type="checkbox" class="chk-finalize" checked>
                         </div>
-
+                        <div>
+                            <label for="chkGraph" style="display: inline-block; margin: auto;"><b>Generate
+                                    graph:</b></label>
+                            <input id="chkGraph" type="checkbox" class="chk-finalize">
+                        </div>
                     </div>
                     <hr>
                     <div class="btn">
@@ -106,7 +92,7 @@
     </script>
     <script>
         GenerateContextHelp(["<p>The report details page allows you to configure options and generate a report.</p>",
-            "<p>Select a date and at least one manufacturer from the 'Manufacutrers' list, then press 'Generate Warranty Report'.</p>",
+            "<p>Select a date and at least one manufacturer from the 'Manufacutrers' list, then press 'Generate Warranty Report'</p>",
             "<p>Optional information can be generated using the checkboxes. Uncheck a checkbox to omit this information from the report.</p>"])
     </script>
 </body>

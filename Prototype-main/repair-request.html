@@ -32,34 +32,21 @@
                         </div>
 
                         <div>
-                            <span style="display: flex;">
-                                <i class='far fa-question-circle' title="Select a customer from the dropdown list"
-                                    style='font-size:17px; color: blue; cursor: pointer; margin-right: 5px;'></i>
-                                <label for="customers"><b>Customers:</b></label>
-                            </span>
+                            <label for="customers"><b>Customers:</b></label>
                             <select id="customers" name="create" required>
                                 <option value="">Select a customer...</option>
                             </select>
                         </div>
 
+
                         <div>
-                            <div>
-                                <span style="display: inline;">
-                                    <i class='far fa-question-circle' title="Uncheck to mark the request as pending"
-                                        style='font-size:17px; color: blue; cursor: pointer; margin-right: 5px;'></i>
-                                    <label for="chkStart" style="display: inline;"><b>Start Repair:</b></label>
-                                </span>
-                                <input id="chkStart" type="checkbox" class="chk-finalize">
-                            </div>
+                            <label for="equipments"><b>Start Repair:</b></label>
+                            <input type="checkbox" checked>
                         </div>
 
                         <div>
-                            <span style="display: flex;">
-                                <i class='far fa-question-circle'
-                                    title="Select a customer's equipment from the dropdown list"
-                                    style='font-size:17px; color: blue; cursor: pointer; margin-right: 5px;'></i>
-                                <label for="equipments"><b>Equipment:</b></label>
-                            </span>
+
+                            <label for="equipments"><b>Equipment:</b></label>
                             <select id="equipments" name="create" required>
                                 <option value="">Select equipment...</option>
                             </select>
@@ -67,11 +54,7 @@
 
                         <div class="col">
                             <div class="txtDesc">
-                                <span style="display: flex;">
-                                    <i class='far fa-question-circle' title="Enter a description of the problem"
-                                        style='font-size:17px; color: blue; cursor: pointer;'></i>
-                                    <label for="description"><b>Description of the problem:</b></label>
-                                </span>
+                                <label for="description"><b>Customer's Description:</b></label>
                                 <textarea class="description" id="description" style="width: 500px;"></textarea>
                             </div>
                         </div>
@@ -108,5 +91,4 @@
         ])
     </script>
 </body>
-
 </html>

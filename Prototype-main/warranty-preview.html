@@ -27,18 +27,17 @@
     </header>
     <main>
         <div class="preview-page">
-            <h1 style="display: inline-block; margin: 25px 10px;">Waranty Report: <br> Nov 15th, 2023 - Dec 15th, 2023
+            <h1 style="display: inline-block; margin: 25px 10px;">Waranty Report: <br> Nov 15th, 2023 - Dec 15th, 2024
             </h1>
             <img src="images/FixIt.png" alt="FixIt Logo" id="fixlogo" style="width: 150px; float: right;">
             <table class="warranty-table">
                 <tbody>
                     <tr>
-                        <th style="width: 100px;">Manufacturer</th>
+                        <th>Manufacturer</th>
                         <th>Repair Cost</th>
-                        <th style="width: 180px;">Parts used</th>
-                        <th style="width: 100px;">Repair Time</th>
+                        <th>Parts used</th>
+                        <th>Repair Time</th>
                         <th>Date Repaired</th>
-                        <th style="width: 300px;">Repair Description</th>
                         <th></th>
                     </tr>
                     <tr>
@@ -47,7 +46,6 @@
                         <td>sparkplug &#215;2<br>master break cylinder &#215;1</td>
                         <td>3.1 Hours</td>
                         <td>Nov 22rd, 2023</td>
-                        <td>Changed sparkplugs and replaced master break cylinder</td>
                     </tr>
                     <tr>
                         <td>Kohler</td>
@@ -55,7 +53,6 @@
                         <td>piston &#215;4</td>
                         <td>1.3 Hours</td>
                         <td>Nov 25rd, 2023</td>
-                        <td>Ordered Kohler pistons and replaced four piston in the engines</td>
                     </tr>
                     <tr>
                         <td>Kohler</td>
@@ -63,7 +60,6 @@
                         <td>flywheel &#215;1<br>carburetor &#215;1<br>timing belt &#215;1</td>
                         <td>2.6 Hours</td>
                         <td>Dec 2nd, 2023</td>
-                        <td>Replaced and tightened timing belt. Replaced carburetor and flywheel</td>
                     </tr>
                     <tr>
                         <td>Kohler</td>
@@ -71,7 +67,6 @@
                         <td> Engine block &#215;1<br></td>
                         <td>0.8 Hours</td>
                         <td>Dec 9th, 2023</td>
-                        <td>dismantled engine and replaced engine block</td>
                     </tr>
                 </tbody>
             </table>
@@ -81,16 +76,19 @@
             <div class="col" style="text-align: center;">
                 <h3>Total Repair Cost: <u>$776.94</u></h3>
                 <h3>Total Time Spent On Repairs: <u>8 Hours</u></h3>
-                <h3>Average Repair Cost: <u>$194.23</u></h3>
+                <h3 >Average Repair Cost: <u>$194.23</u></h3>
                 <h3>Number of Manufacturers Included: <u>1</u></h3>
-                <h3>Highest Repair Cost: <u>$342.49</u></h3>
+                <h3 >Highest Repair Cost: <u>$342.49</u></h3>
             </div>
-            <hr style="position: absolute; width: 97%; bottom: 140px;">
-            
-            <p style="position: absolute; bottom: 75px; left: 20px; font-size: 24px;">Corresponding Companies: <u>Kohler</u></p>
-            <p style="position: absolute; bottom: 20px; left: 20px; font-size: 24px;">Report run by: <u>Emily Rosten</u></p>
-            <p style="position: absolute; bottom: 20px; left: 420px; font-size: 24px;">Run On: <u>Dec 15th, 2023</u></p>
-            <p style="position: absolute; bottom: 20px; right: 40px;">1/1</p>
+            <p style="position: absolute; bottom: 20px; right: 40px;">1/2</p>
+        </div>
+
+        <div class="preview-page">
+            <h1 style="display: inline-block; margin: 25px 10px;">Waranty Report: <br> Nov 15th, 2023 - Dec 15th, 2024
+            </h1>
+            <img src="images/FixIt.png" alt="FixIt Logo" id="fixlogo" style="width: 150px; float: right;">
+            <canvas id="costChart" style="width:100%;max-width:95%; margin: 10px auto;"></canvas>
+            <p  style="position: absolute; bottom: 20px; right: 40px;">2/2</p>
         </div>
     </main>
     <footer>
@@ -100,6 +98,25 @@
     <script src="JS/context-help.js"></script>
     <script>
         GenerateContextHelp(["<p>The report preview page allows you to see a preview of the chosen report.</p>"])
+    </script>
+
+    <script>
+        const xValues = ["Nov 15th", "", "Nov 22nd", "", "Nov 29th", "", "Dec 6th", "", "Dec 15th"];
+        const yValues = [0, 0, 98.98, 142.49, 142.40, 342.49, 342.49, 192.49, 192.49];
+
+        let chart = new Chart("costChart", {
+            type: "line",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: { display: false }
+            }
+        });
+
     </script>
 </body>
 
