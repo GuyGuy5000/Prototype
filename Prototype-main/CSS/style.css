@@ -345,7 +345,7 @@ form label {
   bottom: 0;
   color: #000000;
   display: block;
-  font-size: 16px;
+  font-size: 20px;
   pointer-events: none;
   transition: all 0.3s ease;
 }
@@ -358,9 +358,9 @@ select {
   border: 1px solid #000000;
   border-radius: 5px;
   display: inline-block;
-  height: 30px;
+  height: 35px;
   margin: 10px 0;
-  width: 200px;
+  width: 275px;
 }
 
 .form-group input:focus+.label-name,
@@ -654,7 +654,7 @@ input[type="file"] {
   right: -80px;
   padding: 17px;
   position: fixed;
-  top: 90px;
+  top: 105px;
   transform: translate(-50%, -50%);
   overflow: hidden;
   width: 300px;
@@ -718,7 +718,8 @@ input[type="file"] {
 }
 
 #search-button,
-#new-button {
+#new-button,
+#back {
   padding: 10px 20px;
   background-color: #333;
   color: #fff;
@@ -734,7 +735,6 @@ input[type="file"] {
 }
 
 #new-button{
-  display: block;
   margin: 5px auto;
 }
 
@@ -827,10 +827,18 @@ button {
   padding: 10px;
 }
 
-.man {
-  margin-top: 30px;
+#pauseBtn:hover{
+  font-size: larger;
+  color: #fff;
+  background-color: red;
+  
 }
 
+#saveBtn:hover{
+  font-size:larger;
+  color: #fff;
+  background-color: green;
+}
 /**********************************************
               REPAIR REQUEST FORM
 ***********************************************/
@@ -906,7 +914,7 @@ button {
 ***********************************************/
 
 /**********************************************
-                 NEW INDEX PROPERTY CSS
+          NEW INDEX CSS
 ***********************************************/
 .login-person {
   display: grid;
@@ -988,5 +996,5 @@ button {
   background-color: #555;
 }
 /**********************************************
-                 NEW INDEX PROPERTY CSS
+        NEW INDEX CSS
 ***********************************************/

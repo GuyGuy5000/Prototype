@@ -24,7 +24,7 @@
 
     <main>
         <div class="manage-search">
-            <h2>Select a manufacturer to edit</h2>
+            <h2>Search manufacturers</h2>
             <input list="manufacturer" id="select" size="5"
                 onchange="SelectForEdit(input, datalist, txt, btnAdd, btnUpdate)"
                 placeholder="Select a manufacturer...">
@@ -34,8 +34,14 @@
         <form id="form">
             <div class="manage-update">
                 <div class="manage">
-                    <h2>Update manufacturers</h2>
-                    <br>
+                    <h2>
+                        <span style="display:inline-flex;">
+                            <i class='far fa-question-circle'
+                                title="use the 'Manufacturer' textbox to add or update a manufacturer"
+                                style='font-size:17px; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                            <label for="newmanufacturer" style="font-size: 20px;"><b>Manufacturer:</b></label>
+                        </span>
+                    </h2>
                     <input type="text" id="newmanufacturer" placeholder="Enter manufacturer name...">
                     <br>
                     <button type="button" id="btnadd"
@@ -46,6 +52,11 @@
                         onclick="UpdateDropdown(input, datalist, txt, btnAdd, btnUpdate)" disabled>
                         Update
                     </button>
+                    <div class="btn btn-small" style="display: flex;">
+                        <button onclick="history.back()" type="reset">
+                            <span>Back</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </form>
@@ -67,8 +78,8 @@
         let value = "manufacturer";
         let plural = "manufacturers";
         GenerateContextHelp(["<p>This is a maintenance page for storing repetitive information.</p>",
-                             `<p>To add a ${value} to the database, type into the 'Update ${plural}' textbox and press the 'Add' button.</p>`,
-                             `<p>To update a ${value} in the database, search for it using the 'Select a ${value}' textbox and press the 'Update' button.</p>`])
+            `<p>To add a ${value} to the database, type into the '${value}' textbox and press the 'Add' button.</p>`,
+            `<p>To update a ${value} in the database, search for it using the 'Search ${plural}' textbox and press the 'Update' button.</p>`]);
     </script>
 </body>
 

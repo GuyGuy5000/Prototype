@@ -26,8 +26,10 @@
             <input id="search-input" type="text" list="equipment-list" required>
             <label id="placeholder-label" for="search-input">Search for equipment Ex: Kohler Engine</label>
             <datalist id="equipment-list"></datalist>
-            <button id="search-button" class="Sbtn">Search</button>
-            <button id="new-button" class="Sbtn" onclick="window.location.href='create_equipment.html'">Add New Customer</button>
+            <button id="search-button">Search</button>
+            <br>
+            <button id="new-button" onclick="window.location.href='create_equipment.html'">Add Equipment</button>
+            <button id="back" onclick="history.back()">Back</button>
         </div>
         <div style="text-align: center; padding: 20px 0;">
             <label id="warning" style="color: red; font-size: 22px;"></label>
@@ -46,6 +48,8 @@
         ])
     </script>
     <script src="JS/search-equipment.js"></script>
+    <script>
+        GenerateSummary(EquipmentTable, true, false) 
+    </script>
 </body>
-
 </html>

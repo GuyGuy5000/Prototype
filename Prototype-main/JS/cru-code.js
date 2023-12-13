@@ -19,7 +19,18 @@ function GenerateSummary(table, equimpentBool, repairsBool) {
         }
         if (equimpentBool) {
             output += `<td><a href="edit.html#equipment">Edit</a></td>`;
-            output += `<td><a href="repair-request.html">Repair</a></td></tr>`;
+
+            if (sessionStorage.getItem("equipmentListed") === "false") {
+                output += `<td><span style="display: flex;">
+                                <i class='fa-regular fa-circle-check' title="Repair submitted!"
+                                style='font-size:17px; text-align: center; color: rgb(51, 255, 156); cursor: pointer; margin-right: 5px;'></i>
+                           </span></td>`;
+                sessionStorage.setItem("equipmentListed", "true");
+            }
+            else {
+                output += `<td><a href="repair-request.html">Repair</a></td>`;
+            }
+            output += "</tr>";
         }
         else if (repairsBool) {
             //randomize the status of each record
@@ -34,7 +45,7 @@ function GenerateSummary(table, equimpentBool, repairsBool) {
                 'icon': 'fa-solid fa-angles-right'
             },
             {
-                'status': 'Repair pending',
+                'status': 'Repair pending<br><br>Scheduled for:<br>Dec 15th, 2023',
                 'color': 'color: rgb(255, 75, 51);',
                 'icon': 'fa-regular fa-clock'
             }
@@ -44,9 +55,11 @@ function GenerateSummary(table, equimpentBool, repairsBool) {
                         <span style="display: flex;">
                             <i class='${statuses[randomInt]["icon"]}' title="${statuses[randomInt]["status"]}"
                             style='font-size:17px; text-align: center; ${statuses[randomInt]["color"]} cursor: pointer; margin-right: 5px;'></i>
+                            ${statuses[randomInt]["status"]}
                         </span>
                        </td>`;
-            output += `<td><a href="repair-details.html">Select</a></td></tr>`;
+                       output += `<td><a href="repair-details.html">Select</a></td>`;
+                       output += `<td><div class="btn btn-small"><button onclick="alert('Notification sent!');"><span>Send Notification</span></button></div></td>`;
         }
         else {
             output += `<td><a href="edit.html#customer">Edit</a></td>`;

@@ -67,25 +67,35 @@ var CustomerTable = [
             "A1B2C3",
             "Welland",
             "ON"
+        ),
+        Customer(
+            "Donut", 
+            "Sprinkles", 
+            "doughnut@sprinkles.com",
+            "42 Sugar Blvd.",
+            "5194629426",
+            "C4N4D4",
+            "Welland",
+            "ON"
         )
 ];
 var EquipmentTable = [
     Equipment(
-        "Repaired",
+        "Greenworks",
         "TimeMaster™",
         "Toro 60V MAX* 30 in. (76 cm) eTimeMaster™ PPADLM",
         "9472956395",
         "A high end rotary lawn mower",
     ),
     Equipment(
-        "",
+        "Husqvarna",
         "Recycler®",
         "60V Max* 22 in. (56cm) Recycler® Lawn Mower",
         "9465926752",
         "A mid-range rotary lawn mower",
     ),
     Equipment(
-        "Repair On-going",
+        "Kohler",
         "Kohler Engine 5400 Series",
         "5400 Series KS595",
         "7254958410",
@@ -309,9 +319,9 @@ function ValidateCustomer(customerDict){
 }
 
 //-----------------Equipment record-----------------//
-function Equipment(repaired,name, model, vin, description){
+function Equipment(manufacturer ,name, model, vin, description){
     let equipDict = {
-        RepairStatus: repaired,
+        Manufacturer: manufacturer,
         Name: name,
         Model: model,
         VIN: vin,

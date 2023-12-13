@@ -73,8 +73,7 @@
                     <br>
                     <div class="txtDesc">
                         <span style="display: flex;">
-                            <i class='far fa-question-circle'
-                                title="Enter a description of the repair process"
+                            <i class='far fa-question-circle' title="Enter a description of the repair process"
                                 style='font-size:17px; color: blue; cursor: pointer; margin-right: 5px;'></i>
                             <label for="techDesc"><b>Technician's description:</b></label>
                         </span>
@@ -91,10 +90,17 @@
                         <label for="chkFinalized" style="display: inline-block;"><b>Finish repair:</b></label>
                         <input id="chkFinalized" type="checkbox" class="chk-finalize">
                     </div>
-                    <div class="btn">
-                        <button>
-                            <span>Save Repair</span>
-                        </button>
+                    <div style="display: flex; flex-direction: row;">
+                        <div class="btn" style="margin-left: 200px;">
+                            <button id="pauseBtn">
+                                <span>Pause Repair</span>
+                            </button>
+                        </div>
+                        <div class="btn" style="margin-left: 0px;">
+                            <button id="saveBtn">
+                                <span>Save Repair</span>
+                            </button>
+                        </div>
                     </div>
                     <div class="btn btn-small">
                         <button onclick="history.back()" formnovalidate>

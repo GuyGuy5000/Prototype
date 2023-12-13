@@ -27,7 +27,9 @@
             <label id="placeholder-label" for="search-input">Search for a customer Ex: Emmanuel James</label>
             <datalist id="customer-list"></datalist>
             <button id="search-button" class="Sbtn">Search</button>
-            <button id="new-button" class="Sbtn" onclick="window.location.href='create_customer.html'">Add New Customer</button>
+            <br>
+            <button id="new-button" onclick="window.location.href='create_customer.html'">Add new customer</button>
+            <button id="back" onclick="history.back()">Back</button>
         </div>
         <div style="text-align: center; padding: 20px 0;">
             <label id="warning" style="color: red; font-size: 22px;"></label>
@@ -47,6 +49,8 @@
         ])
     </script>
     <script src="JS/search-customers.js"></script>
+    <script>
+        GenerateSummary(CustomerTable, false, false) 
+    </script>
 </body>
-
 </html>

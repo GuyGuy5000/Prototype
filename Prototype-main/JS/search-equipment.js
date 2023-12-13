@@ -17,6 +17,7 @@ function handleInput() {
         const matchingCustomers = EquipmentTable.filter((customer) =>
             customer.Name.toLowerCase().includes(searchTerm) ||
             customer.Model.toLowerCase().includes(searchTerm) ||
+            customer.Manufacturer.toLowerCase().includes(searchTerm) ||
             customer.Description.toLowerCase().includes(searchTerm)
         );
 
@@ -41,7 +42,8 @@ function handleSearch() {
     const matchingCustomers = EquipmentTable.filter((customer) => {
         return searchTerms.every((term) =>
             customer.Name.toLowerCase().includes(term) ||
-            customer.Mode.toLowerCase().includes(term) ||
+            customer.Model.toLowerCase().includes(term) ||
+            customer.Manufacturer.toLowerCase().includes(term) ||
             customer.Description.toLowerCase().includes(term)
         );
     });
@@ -67,6 +69,7 @@ function displaySuggestions(searchTerm) {
         const matchingCustomers = EquipmentTable.filter((customer) =>
             customer.Name.toLowerCase().includes(searchTerm) ||
             customer.Model.toLowerCase().includes(searchTerm) ||
+            customer.Manufacturer.toLowerCase().includes(searchTerm) ||
             customer.Description.toLowerCase().includes(searchTerm)
         );
 
