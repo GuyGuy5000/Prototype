@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
+    <!--Charts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <title>Warrenty Report Details</title>
+
+    <script src="JS/database.js"></script>
+    <script src="JS/cru-code.js"></script>
+    <script src="JS/generate-data.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+    </header>
+    <main>
+        <div class="preview-page">
+            <h1 style="display: inline-block; margin: 25px 10px;">Custom Report: <br> Nov 15th, 2023 - Dec 15th, 2023
+            </h1>
+            <img src="images/FixIt.png" alt="FixIt Logo" id="fixlogo" style="width: 150px; float: right;">
+
+            <!--PLACE CODE HERE-->
+
+
+
+            <!--PLACE CODE HERE-->
+
+            <p style="position: absolute; bottom: 20px; right: 40px;">1/2</p>
+        </div>
+
+        <div class="preview-page">
+            <h1 style="display: inline-block; margin: 25px 10px;">Custom Report: <br> Nov 15th, 2023 - Dec 15th, 2023
+            </h1>
+            <img src="images/FixIt.png" alt="FixIt Logo" id="fixlogo" style="width: 150px; float: right;">
+            <!--Chart tag-->
+            <canvas id="customChart" style="width:100%;max-width:95%; margin: 10px auto;"></canvas>
+            <p  style="position: absolute; bottom: 20px; right: 40px;">2/2</p>
+        </div>
+    </main>
+    <footer>
+        <h3> &copy; Webcrafters 2023</h3>
+    </footer>
+    <script src="JS/header-template.js"></script>
+    <script src="JS/context-help.js"></script>
+    <script>
+        GenerateContextHelp(["<p>The report preview page allows you to see a preview of the chosen report.</p>"])
+    </script>
+
+    <!--Chart data and customization-->
+    <script>
+        const xValues = ["Nov 15th", "Nov 22nd", "Nov 29th", "Dec 6th", "Dec 15th"];
+        const yValues = [1,2,3,4,3,2];
+
+        let chart = new Chart("customChart", {
+            type: "line",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: { display: false }
+            }
+        });
+
+    </script>
+</body>
+
+</html>

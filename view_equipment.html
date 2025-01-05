@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
+    <title>Equipment Search</title>
+
+    <script src="JS/database.js"></script>
+    <script src="JS/cru-code.js"></script>
+</head>
+
+<body>
+    <header id="header">
+    </header>
+    <main>
+        <h1 class="sc">Search Equipment</h1>
+        <div class="search-container">
+            <input id="search-input" type="text" list="equipment-list" required>
+            <label id="placeholder-label" for="search-input">Search for equipment Ex: Kohler Engine</label>
+            <datalist id="equipment-list"></datalist>
+            <button id="search-button">Search</button>
+            <br>
+            <button id="new-button" onclick="window.location.href='create_equipment.html'">Add Equipment</button>
+            <button id="back" onclick="history.back()">Back</button>
+        </div>
+        <div style="text-align: center; padding: 20px 0;">
+            <label id="warning" style="color: red; font-size: 22px;"></label>
+        </div>
+        <table id="tblSummary"></table>
+    </main>
+    <footer>
+        <h3> <i class="fa-regular fa-copyright"></i> Webcrafters 2023</h3>
+    </footer>
+    <script src="JS/header-template.js"></script>
+    <script src="JS/context-help.js"></script>
+    <script>
+        GenerateContextHelp(["<p>The equipment search page lets you search for a customer's equipment and edit its information.</p>",
+            "<p>type into the search bar and click the 'search' button to see the results.</p>",
+            "<p>After searching, press the 'edit' button to edit that customer's equipment information.</p>"
+        ])
+    </script>
+    <script src="JS/search-equipment.js"></script>
+    <script>
+        GenerateSummary(EquipmentTable, true, false) 
+    </script>
+</body>
+</html>

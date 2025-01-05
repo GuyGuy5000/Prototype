@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
+    <!--Charts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <title>Customer Feedback Report Preview</title>
+
+    <script src="JS/database.js"></script>
+    <script src="JS/cru-code.js"></script>
+    <script src="JS/generate-data.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+    </header>
+    <main>
+        <div class="preview-page">
+            <h2 style="display: inline-block; margin: 25px 10px;">Customer Feedback Report: <br> Nov 15th, 2023 - Dec 15th, 2023
+            </h2>
+            <img src="images/FixIt.png" alt="FixIt Logo" id="fixlogo" style="width: 150px; float: right;">
+
+            <table class="warranty-table">
+                <tbody>
+                    <tr>
+                        <th style="width: 100px;">Star rating</th>
+                        <th style="width: 300px;">Customer review</th>
+                        <th style="width: 170px;">Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>really nice service</td>
+                        <td>Nadav Hilu</td>
+                        <td>nhilu1@ncstudents.niagaracollege.ca</td>
+                        <td>(219) 555-2368</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>the person who helped me was really nice, would come again!</td>
+                        <td>Donut</td>
+                        <td>donut@gmail.com</td>
+                        <td>(350) 030-7926</td>
+                    <tr>
+                        <td>5</td>
+                        <td>great service! 5/5</td>
+                        <td>Melody Ritter</td>
+                        <td>melodyritter@music.rthm</td>
+                        <td>(444) 341-7352</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>A good service all around</td>
+                        <td>William Deir</td>
+                        <td>billdeir@construction.com</td>
+                        <td>(800) 135-5237</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <hr>
+            <h2 style="margin-left: 30px;">Report Details</h2>
+            <div class="col" style="text-align: center;">
+                <h3>Average star rating: <u>5</u></h3>
+                <h3>Number of reviews: <u>4</u></h3>
+                <h3>Best service: <u>Customer service</u></h3>
+                <h3>Service to improve: <u>Repair service</u></h3>
+            </div>
+
+            <hr style="position: absolute; width: 97%; bottom: 140px;">
+            <p style="position: absolute; bottom: 20px; left: 20px; font-size: 24px;">Report run by: <u>Emily Rosten</u></p>
+            <p style="position: absolute; bottom: 20px; left: 420px; font-size: 24px;">Run On: <u>Dec 15th, 2023</u></p>
+            <p style="position: absolute; bottom: 20px; right: 40px;">1/1</p>
+            <button style="position: absolute; top: -10px; right: -120px; width: 90px; height: 30px; background: #FFF;">
+                <i class="fa fa-print" style="cursor: pointer; text-decoration: none; " onclick="printPage()"> Print</i>
+            </button>
+        </div>
+    </main>
+    <footer>
+        <h3> &copy; Webcrafters 2023</h3>
+    </footer>
+    <script src="JS/header-template.js"></script>
+    <script src="JS/context-help.js"></script>
+    <script>
+        GenerateContextHelp(["<p>The report preview page allows you to see a preview of the chosen report.</p>"])
+    </script>
+</body>
+</html>

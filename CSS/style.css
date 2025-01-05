@@ -1,0 +1,1000 @@
+/***************************************************
+                    TEMPLATE
+***************************************************/
+body {
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  text-decoration: none;
+  overflow-x: hidden;
+}
+
+body * {
+  outline: 0;
+}
+
+body *:focus {
+  outline: solid rgb(60, 122, 255) 4px;
+}
+
+h1 {
+  font-size: 46px;
+}
+
+p {
+  font-size: 30px;
+}
+
+header {
+  align-items: center;
+  background: #FFF;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid black;
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+}
+
+header .home-link {
+  height: 95px;
+}
+
+header img {
+  width: 150px;
+}
+
+/*Nav Dropdown*/
+.nav-arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 2px;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(315deg);
+}
+
+.dropdownbtn {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 900;
+  min-width: 220px;
+  padding: 10px 50px;
+
+}
+
+.dropdown {
+  display: inline-block;
+  font-size: 15px;
+  margin: 10px 15px;
+  position: relative;
+}
+
+.dropdown-content {
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  display: block;
+  font-weight: 900;
+  min-width: 220px;
+  position: absolute;
+  top: -1000px;
+  z-index: 1;
+}
+
+.dropdownbtn {
+  background-color: #fff;
+  color: #000;
+}
+
+.dropdown-content a {
+  color: black;
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:focus {
+  background-color: #ddd;
+}
+
+.dropdownbtn:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.dropdownbtn:hover .nav-arrow,
+.dropdownbtn:focus .nav-arrow {
+  transform: rotate(45deg);
+}
+
+.dropdown:hover .dropdown-content,
+.dropdownbtn:focus+.dropdown-content,
+.dropdown-content:focus-within {
+  top: 50px;
+}
+
+/*Nav Dropdown*/
+
+.fa-user {
+  color: #000;
+  font-size: 26px;
+}
+
+/*Hamburger Menu*/
+.burger-menu {
+  margin-left: 0;
+  padding: 5px;
+}
+
+.fa-bars {
+  display: block;
+}
+
+.burger-contents {
+  background-color: white;
+  border: solid black 2px;
+  display: none;
+  font-size: 14px;
+  font-weight: 900;
+  position: absolute;
+  right: 22px;
+  top: 43px;
+  width: 200px;
+}
+
+.burger-contents a {
+  border: solid black 1px;
+  color: black;
+  display: block;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/*Hamburger Menu*/
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav i {
+  font-size: 20px;
+}
+
+.fa-user {
+  margin-top: 7px;
+}
+
+footer {
+  border: 1px solid black;
+  font-size: 15px;
+  padding: 0px;
+  text-align: center;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+/***************************************************
+              TEMPLATE ENDS HERE
+***************************************************/
+
+/***************************************************
+                    HOME PAGE
+***************************************************/
+.homepage-sign-in {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.employee-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.sign-in-button {
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 8px auto;
+  padding: 10px 20px;
+  width: 80px;
+}
+
+.sign-in-button:hover {
+  background-color: #555;
+}
+
+.employee-info li {
+  list-style-type: none;
+}
+
+.third-section {
+  border-top: 3px solid #000000;
+  border-bottom: 2px solid #000000;
+  display: flex;
+  height: 400px;
+  justify-content: space-around;
+}
+
+.third-section div {
+  border: solid rgba(0, 0, 0, 0.815) 5px;
+  border-radius: 10%;
+  margin: 20px 0;
+  margin-top: 90px;
+  max-height: 120px;
+  min-width: 130px;
+  padding: 20px;
+}
+
+.third-section div i {
+  margin-left: 45px;
+}
+
+.third-section-icon {
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  height: auto;
+  width: auto;
+}
+
+.third-section-icon:hover {
+  color: #5e5e5e;
+}
+
+.icon-large,
+.second-icon-large {
+  font-size: 3.5em;
+}
+
+/***************************************************
+              HOME PAGE ENDS HERE
+***************************************************/
+
+/***************************************************
+          CUSTOMER & EQUIPMENT CREATE PAGE
+***************************************************/
+label {
+  color: #000000;
+  font-size: 16px;
+}
+
+.main-form {
+  background-color: #f5f5f5;
+  margin: 0 auto;
+  padding: 10px 0;
+
+  width: 70%;
+
+}
+
+.collapse {
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.col {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 20px;
+  text-align: left;
+  height: 60px;
+}
+
+.txtBox {
+  margin-left: 50px;
+}
+
+fieldset {
+  border-color: #000000;
+  border-radius: 5px;
+  border-style: solid;
+  padding-bottom: 15px;
+}
+
+legend {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  position: relative;
+  right: 70px;
+}
+
+.form-group input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  font-size: 16px;
+  height: 40px;
+  padding: 5px 0;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.form-group input:focus {
+  border-color: rgb(60, 122, 255);
+  outline: none;
+}
+
+form label {
+  bottom: 0;
+  color: #000000;
+  display: block;
+  font-size: 20px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="button"],
+select {
+  border: 1px solid #000000;
+  border-radius: 5px;
+  display: inline-block;
+  height: 35px;
+  margin: 10px 0;
+  width: 275px;
+}
+
+.form-group input:focus+.label-name,
+.form-group input:valid+.label-name {
+  color: #333;
+  font-size: 14px;
+  transform: translateY(-20px);
+}
+
+/***************************************************
+          CUSTOMER CREATE PAGE ENDS HERE
+***************************************************/
+
+/*************************************************
+          LOGIN SECTION
+*************************************************/
+
+.body {
+  align-items: center;
+  background-color: #f0f0f0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+}
+
+.login-container {
+  background-color: #fff;
+  border: 1px solid #3498db;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 300px;
+  margin: 150px auto;
+  padding: 20px;
+  width: 40%;
+}
+
+.login-container h2 {
+  color: #333;
+  /* Text color */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-container input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
+}
+
+.login-container a {
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 12px;
+  text-align: center;
+  width: 80px;
+}
+
+.login-container a:hover {
+  background-color: #4b4b4b;
+}
+
+/*************************************************
+          LOGIN SECTION ENDS HERE
+*************************************************/
+
+/***************************************************
+                    BUTTON
+***************************************************/
+.btn {
+  margin: 10px auto;
+  margin-left: 40%;
+}
+
+.btn button:hover {
+  background: gray;
+  color: black;
+}
+
+.btn button {
+  background-color: #FFF;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid black;
+  height: 70px;
+  min-width: 200px;
+}
+
+.btn i {
+  font-size: 22px;
+}
+
+.btn h2 {
+  display: block;
+  font-size: 13px;
+}
+
+.btn button span {
+  /* Add styles for the text */
+  font-weight: bold;
+}
+
+/*small version of button*/
+.btn-small {
+  display: inline;
+  margin: 0 5px;
+  min-width: 0;
+  max-width: 100px;
+}
+
+.btn-small button {
+  min-width: 0;
+  max-width: 100px;
+  height: 50px;
+}
+
+.btn-small span {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/***************************************************
+              BUTTON ENDS HERE
+***************************************************/
+.icons {
+  left: 1730px;
+  margin-top: 30px;
+}
+
+#iconI,
+#iconT,
+#iconF {
+  margin-right: 15px;
+}
+
+.Lost h1 {
+  margin-left: 150px;
+  width: 600px;
+}
+
+#text {
+  margin-left: 130px;
+  width: 600px;
+}
+
+.manage button[type="button"],
+input[type="submit"] {
+  background: #000;
+  border: 2px solid;
+  border-radius: 7px;
+  color: #FFF;
+  display: inline-block;
+  font-size: 18px;
+  margin-top: 20px;
+  padding: 10px 30px;
+}
+
+.city button[type="button"]:hover {
+  background-color: #6e6e6e;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+}
+
+
+/**********************************************
+          CREATE EQUIPMENT ENDS HERE
+***********************************************/
+#vin {
+  height: 28px;
+  min-width: 200px;
+}
+
+.col {
+  margin-bottom: 30px;
+}
+
+.vin {
+  margin-right: 400px;
+}
+
+.description {
+  border: 1px solid black;
+  height: 50px;
+  width: 900px;
+}
+
+#color {
+  margin-top: 4px;
+}
+
+/**********************************************
+          Create Equipment 
+***********************************************/
+
+/**********************************************
+              SUMMARY TABLE
+***********************************************/
+
+#tblSummary {
+  background-color: #f5f5f5;
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 10px auto;
+  text-align: center;
+  width: 1260px;
+}
+
+#tblSummary tr {
+  border: 2px solid #000;
+}
+
+#tblSummary th,
+#tblSummary td {
+  padding: 20px 10px;
+}
+
+.manage-search,
+.manage-update {
+  border: 1px solid black;
+  background-color: #f5f5f5;
+  text-align: center;
+  margin: 10px auto;
+  padding: 10px 0;
+  width: 60%;
+}
+
+.manage-search #tblSummary {
+  background-color: #e7e7e7;
+  width: 400px;
+}
+
+
+.manage-search #tblSummary th,
+.manage-search #tblSummary td {
+  padding: 10px;
+}
+
+.manage-search input,
+.manage-update input {
+  display: block;
+  height: 30px;
+  margin: 0 auto;
+  width: 400px;
+}
+
+/**********************************************
+              SUMMARY TABLE
+***********************************************/
+
+/**********************************************
+              CONTEXT HELP
+***********************************************/
+.help-icon {
+  align-items: center;
+  background-color: #000;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  margin-top: 5px;
+  width: 28px;
+}
+
+.icon {
+  color: #fff;
+  font-size: 20px;
+}
+
+.help-box {
+  background-color: #FFF;
+  border: 3px solid rgb(4, 98, 251);
+  border-radius: 9px;
+  box-shadow: 0 0 1px rgba(4, 98, 251);
+  display: none;
+  height: 100px;
+  right: -80px;
+  padding: 17px;
+  position: fixed;
+  top: 105px;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  width: 300px;
+  z-index: 2;
+}
+
+#nextBtn,
+#skipBtn {
+  background-color: rgba(255, 255, 255, 1.0);
+  border-radius: 6px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 5px 10px;
+}
+
+.help-box p {
+  font-size: 14px;
+}
+
+.help-content {
+  margin-bottom: 10px;
+}
+
+.help-actions {
+  text-align: right;
+}
+
+
+.context-help {
+  background-color:#38F; 
+  color: #FFF;
+  cursor: help;
+  display: inline;
+  padding: 1px 5px; 
+  border-radius: 100%;
+}
+
+/**********************************************
+          CONTEXT HELP ENDS HERE
+***********************************************/
+
+/**********************************************
+                  SEARCH
+***********************************************/
+
+.search-container {
+  text-align: center;
+  margin-top: 20px;
+  border: 5px solid black;
+}
+
+#search-input {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#search-button,
+#new-button,
+#back {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#search-button:hover,
+#new-button:hover {
+  background-color: #555;
+}
+
+#new-button{
+  margin: 5px auto;
+}
+
+#new-button a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* Style customer details section */
+#customer-details {
+  text-align: center;
+  display: none; /* Hide by default */
+  margin-top: 20px;
+}
+
+#customer-details h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#customer-details p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.sc {
+  text-align: center;
+}
+
+button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+#search-container {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+#search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 610px;
+}
+
+#placeholder-label {
+  position: absolute;
+  left: 630px;
+  top: 255px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: #999;
+   /* Placeholder color */
+}
+
+#search-input:focus + #placeholder-label,
+#search-input:valid + #placeholder-label {
+  right: -32%;
+}
+/**********************************************
+              SEARCH ENDS HERE
+***********************************************/
+
+/**********************************************
+              REPAIR REQUEST FORM
+***********************************************/
+
+#datePicker {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 150px;
+  height: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-equip {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 10px;
+}
+
+#pauseBtn:hover{
+  font-size: larger;
+  color: #fff;
+  background-color: red;
+  
+}
+
+#saveBtn:hover{
+  font-size:larger;
+  color: #fff;
+  background-color: green;
+}
+/**********************************************
+              REPAIR REQUEST FORM
+***********************************************/
+
+/**********************************************
+              REPAIR DETAILS FORM
+***********************************************/
+.time-input{
+  border-radius: 5px;
+  height: 27px;
+  width: 200px;
+}
+
+.chk-finalize{
+  height: 20px;
+  width: 20px;
+}
+/**********************************************
+              REPAIR DETAILS FORM
+***********************************************/
+
+/**********************************************
+                REPAIR LIST
+***********************************************/
+.repair-status{
+  background-color:#Faa; 
+  padding: 1px 5px; 
+  border-radius: 100%;
+  cursor: help;
+}
+/**********************************************
+                REPAIR LIST
+***********************************************/
+
+/**********************************************
+                 WARRANTY
+***********************************************/
+.preview-page{
+  box-shadow: 0 1px 10px #000;
+  height: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  position: relative;
+  width: 80%;
+}
+
+.warranty-table {
+  background-color: #FDFDFD;
+  border: 2px solid #000;
+  border-collapse: collapse;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 10px;
+  width: 95%;
+}
+
+.warranty-table tr {
+  border: 2px solid #000;
+}
+
+.warranty-table th,
+.warranty-table td{
+  padding: 20px 10px;
+}
+
+.warranty-table td{
+  text-align: center;
+}
+
+
+/**********************************************
+                 WARRANTY
+***********************************************/
+
+/**********************************************
+          NEW INDEX CSS
+***********************************************/
+.login-person {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-right: 20px;
+  margin-left: 220px;
+  margin-top: 47px;
+  justify-content: center;
+}
+
+.login-person div {
+  width: 220px;
+  border: 3px solid rgb(17, 17, 17);
+  border-radius: 9px;
+}
+
+.login-person div i {
+  margin-top: 20px;
+  margin-left: 62px;
+}
+
+.login-person div h2 {
+  justify-content: center;
+  margin-left: 43px;
+}
+
+.login-person-icon:hover {
+  color: #5e5e5e;
+}
+
+.indexes-section {
+  border-top: 3px solid #000000;
+  border-bottom: 2px solid #000000;
+  display: flex;
+  height: 400px;
+  justify-content: space-around;
+}
+
+.indexes-section div {
+  border: solid rgba(0, 0, 0, 0.815) 5px;
+  border-radius: 10%;
+  margin: 20px 0;
+  margin-top: 80px;
+  max-height: 120px;
+  min-width: 130px;
+  padding: 20px;
+}
+
+.indexes-section div i {
+  margin-left: 45px;
+}
+
+.indexes-section-icon {
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  height: auto;
+  width: auto;
+}
+
+.indexes-section:hover {
+  color: #5e5e5e;
+}
+
+.indexes-sign-in-button {
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 8px auto;
+  min-height: 26px;
+  padding: 10px 20px;
+  text-decoration: none;
+  width: 245px;
+}
+
+.indexes-sign-in-button:hover {
+  background-color: #555;
+}
+/**********************************************
+        NEW INDEX CSS
+***********************************************/

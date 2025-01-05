@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
+
+    <script src="JS/database.js"></script>
+    <script src="JS/cru-code.js"></script>
+    <title>City Maintanance</title>
+</head>
+
+
+<body>
+    <header id="header">
+    </header>
+
+    <main>
+        <div class="manage-search">
+            <h2>Search cities</h2>
+            <input list="City" id="select" size="5" onchange="SelectForEdit(input, datalist, txt, btnAdd, btnUpdate)"
+                placeholder="Select a city...">
+            <datalist id="City">
+            </datalist>
+        </div>
+        <form id="form">
+            <div class="manage-update">
+                <div class="manage">
+                    <h2>
+                        <span style="display:inline-flex;">
+                            <i class='far fa-question-circle'
+                                title="use the 'city' textbox to add or update a city"
+                                style='font-size:17px; color: blue; cursor: pointer; margin-right: 5px;'></i>
+                            <label for="newCity" style="font-size: 20px;"><b>City:</b></label>
+                        </span>
+                    </h2>
+                    <input type="text" id="newCity" placeholder="Enter city name...">
+                    <br>
+                    <button type="button" id="btnadd"
+                        onclick="AddDropdownOption(input, datalist, txt, btnAdd, btnUpdate)">
+                        Add
+                    </button>
+                    <button style="background-color: #6e6e6e;" type="button" id="btnedit"
+                        onclick="UpdateDropdown(input, datalist, txt, btnAdd, btnUpdate)" disabled>
+                        Update
+                    </button>
+                </div>
+                <div class="btn btn-small" style="display: flex;">
+                    <button onclick="history.back()" type="reset">
+                        <span>Back</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <h3> &copy; Webcrafters 2023</h3>
+    </footer>
+    <script>
+        let input = document.getElementById("select");
+        let datalist = document.getElementById("City");
+        let txt = document.getElementById("newCity");
+        let btnAdd = document.getElementById("btnadd");
+        let btnUpdate = document.getElementById("btnedit");
+        PopulateDropdown(datalist, CityTable);
+    </script>
+    <script src="JS/header-template.js"></script>
+    <script src="JS/context-help.js"></script>
+    <script>
+        let value = "city";
+        let plural = "cities";
+        GenerateContextHelp(["<p>This is a maintenance page for storing repetitive information.</p>",
+            `<p>To add a ${value} to the database, type into the '${value}' textbox and press the 'Add' button.</p>`,
+            `<p>To update a ${value} in the database, search for it using the 'Search ${plural}' textbox and press the 'Update' button.</p>`]);
+    </script>
+</body>
+
+</html>
